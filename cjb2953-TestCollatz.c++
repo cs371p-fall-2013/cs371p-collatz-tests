@@ -63,6 +63,15 @@ TEST(Collatz, read_2) {
     ASSERT_TRUE(b == true);
     ASSERT_TRUE(i ==    100);
     ASSERT_TRUE(j ==   200);}
+    
+TEST(Collatz, read_3) {
+    std::istringstream r("201 210\n");
+    int i;
+    int j;
+    const bool b = collatz_read(r, i, j);
+    ASSERT_TRUE(b == true);
+    ASSERT_TRUE(i ==    201);
+    ASSERT_TRUE(j ==   210);}
 
 TEST(Collatz, read_4) {
     std::istringstream r("900 1000\n");
@@ -70,8 +79,8 @@ TEST(Collatz, read_4) {
     int j;
     const bool b = collatz_read(r, i, j);
     ASSERT_TRUE(b == true);
-    ASSERT_TRUE(i ==    1);
-    ASSERT_TRUE(j ==   10);}
+    ASSERT_TRUE(i ==    900);
+    ASSERT_TRUE(j ==   1000);}
 
 // ----
 // eval
