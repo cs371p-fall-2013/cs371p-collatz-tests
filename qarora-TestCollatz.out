@@ -1,0 +1,35 @@
+Running main() from gtest_main.cc
+[==========] Running 13 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 13 tests from Collatz
+[ RUN      ] Collatz.read
+[       OK ] Collatz.read (17 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (3 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (2 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (2 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (2 ms)
+[ RUN      ] Collatz.eval_5
+[       OK ] Collatz.eval_5 (2 ms)
+[ RUN      ] Collatz.eval_6
+[       OK ] Collatz.eval_6 (1 ms)
+[ RUN      ] Collatz.eval_7
+[       OK ] Collatz.eval_7 (1 ms)
+[ RUN      ] Collatz.cycle_length1
+[       OK ] Collatz.cycle_length1 (1 ms)
+[ RUN      ] Collatz.cycle_length2
+[       OK ] Collatz.cycle_length2 (2 ms)
+[ RUN      ] Collatz.cycle_length3
+[       OK ] Collatz.cycle_length3 (2 ms)
+[ RUN      ] Collatz.print
+[       OK ] Collatz.print (9 ms)
+[ RUN      ] Collatz.solve
+[       OK ] Collatz.solve (4 ms)
+[----------] 13 tests from Collatz (60 ms total)
+
+[----------] Global test environment tear-down
+[==========] 13 tests from 1 test case ran. (87 ms total)
+[  PASSED  ] 13 tests.
