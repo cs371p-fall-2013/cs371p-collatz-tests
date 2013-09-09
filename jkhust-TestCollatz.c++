@@ -46,7 +46,7 @@ gtest.h
 // read
 // ----
 
-TEST(Collatz, read_pass1) {
+TEST(Collatz, read_1) {
     std::istringstream r("1 10\n");
     int i;
     int j;
@@ -55,7 +55,7 @@ TEST(Collatz, read_pass1) {
     ASSERT_TRUE(i == 1);
     ASSERT_TRUE(j == 10);}
 
-TEST(Collatz, read_pass2) {
+TEST(Collatz, read_2) {
     std::istringstream r("99 5\n");
     int i;
     int j;
@@ -64,7 +64,7 @@ TEST(Collatz, read_pass2) {
     ASSERT_TRUE(i == 99);
     ASSERT_TRUE(j == 5);}
     
-TEST(Collatz, read_invalid1) {
+TEST(Collatz, read_3) {
     std::istringstream r("1 144\n");
     int i;
     int j;
