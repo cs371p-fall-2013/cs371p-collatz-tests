@@ -21,9 +21,9 @@ To test the program:
     % locate libgtest_main.a
     /usr/lib/libgtest_main.a
 
-    % g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lpthread -lgtest_main
+    % g++ -pedantic -std=c++0x -Wall Collatz.c++ kayvon-TestCollatz.c++ -o TestCollatz -lgtest -lpthread -lgtest_main
 
-    % valgrind TestCollatz > TestCollatz.out
+    % valgrind TestCollatz > kayvon-TestCollatz.out
 */
 
 // --------
