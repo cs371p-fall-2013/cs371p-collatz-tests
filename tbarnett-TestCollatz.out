@@ -1,0 +1,51 @@
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 21 tests from Collatz
+[ RUN      ] Collatz.read_test
+[       OK ] Collatz.read_test (17 ms)
+[ RUN      ] Collatz.read_reverse
+[       OK ] Collatz.read_reverse (3 ms)
+[ RUN      ] Collatz.read_same
+[       OK ] Collatz.read_same (3 ms)
+[ RUN      ] Collatz.read_smallest_biggest
+[       OK ] Collatz.read_smallest_biggest (3 ms)
+[ RUN      ] Collatz.read_none
+[       OK ] Collatz.read_none (3 ms)
+[ RUN      ] Collatz.eval_test
+[       OK ] Collatz.eval_test (11 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (4 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (4 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (4 ms)
+[ RUN      ] Collatz.eval_5
+[       OK ] Collatz.eval_5 (4 ms)
+[ RUN      ] Collatz.eval_smallest_largest
+[       OK ] Collatz.eval_smallest_largest (1725 ms)
+[ RUN      ] Collatz.eval_same_largest
+[       OK ] Collatz.eval_same_largest (4 ms)
+[ RUN      ] Collatz.eval_reverse
+[       OK ] Collatz.eval_reverse (4 ms)
+[ RUN      ] Collatz.eval_same_ones
+[       OK ] Collatz.eval_same_ones (3 ms)
+[ RUN      ] Collatz.print_1
+[       OK ] Collatz.print_1 (9 ms)
+[ RUN      ] Collatz.print_same_ones
+[       OK ] Collatz.print_same_ones (2 ms)
+[ RUN      ] Collatz.print_largest
+[       OK ] Collatz.print_largest (2 ms)
+[ RUN      ] Collatz.print_reverse_largest
+[       OK ] Collatz.print_reverse_largest (2 ms)
+[ RUN      ] Collatz.solve_single_line
+[       OK ] Collatz.solve_single_line (5 ms)
+[ RUN      ] Collatz.solve_multi_line
+[       OK ] Collatz.solve_multi_line (10 ms)
+[ RUN      ] Collatz.solve_empty
+[       OK ] Collatz.solve_empty (3 ms)
+[----------] 21 tests from Collatz (1837 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 1 test case ran. (1863 ms total)
+[  PASSED  ] 21 tests.
