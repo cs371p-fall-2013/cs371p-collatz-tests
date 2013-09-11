@@ -93,6 +93,26 @@ TEST(Collatz, eval_3) {
 TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_TRUE(v == 174);}
+    
+// ----
+// cycle_length
+// ----
+
+TEST(Collatz, cycle_length_1) {
+    const int v = cycle_length(10);
+    ASSERT_TRUE(v == 7);}
+
+TEST(Collatz, cycle_length_2) {
+    const int v = cycle_length(9);
+    ASSERT_TRUE(v == 20);}
+
+TEST(Collatz, cycle_length_3) {
+    const int v = cycle_length(210);
+    ASSERT_TRUE(v == 40);}
+
+TEST(Collatz, cycle_length_4) {
+    const int v = cycle_length(1000);
+    ASSERT_TRUE(v == 112);}
 
 // -----
 // print
