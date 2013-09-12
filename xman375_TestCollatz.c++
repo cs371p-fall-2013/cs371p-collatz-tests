@@ -6,24 +6,24 @@
 
 /*
 To test the program:
-    % ls -al /usr/include/gtest/
-    ...
-    gtest.h
-    ...
+% ls -al /usr/include/gtest/
+...
+gtest.h
+...
 
-    % locate libgtest.a
-    /usr/lib/libgtest.a
+% locate libgtest.a
+/usr/lib/libgtest.a
 
-    % locate libpthread.a
-    /usr/lib/x86_64-linux-gnu/libpthread.a
-    /usr/lib32/libpthread.a
+% locate libpthread.a
+/usr/lib/x86_64-linux-gnu/libpthread.a
+/usr/lib32/libpthread.a
 
-    % locate libgtest_main.a
-    /usr/lib/libgtest_main.a
+% locate libgtest_main.a
+/usr/lib/libgtest_main.a
 
-    % g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lpthread -lgtest_main
+% g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lpthread -lgtest_main
 
-    % valgrind TestCollatz > TestCollatz.out
+% valgrind TestCollatz > TestCollatz.out
 */
 
 // --------
@@ -31,8 +31,8 @@ To test the program:
 // --------
 
 #include <iostream> // cout, endl
-#include <sstream>  // istringtstream, ostringstream
-#include <string>   // ==
+#include <sstream> // istringtstream, ostringstream
+#include <string> // ==
 
 #include "gtest/gtest.h"
 
@@ -52,8 +52,50 @@ TEST(Collatz, read) {
     int j;
     const bool b = collatz_read(r, i, j);
     ASSERT_TRUE(b == true);
-    ASSERT_TRUE(i ==    1);
-    ASSERT_TRUE(j ==   10);}
+    ASSERT_TRUE(i == 1);
+    ASSERT_TRUE(j == 10);}
+
+// -----
+// cycle
+// -----
+
+TEST(Collatz, cycle_1)
+{
+  const int v = collatz_cycle(15);
+  ASSERT_TRUE(v==18);
+}
+
+TEST(Collatz, cycle_2)
+{
+  const int v = collatz_cycle(15);
+  ASSERT_TRUE(v==18);
+}
+
+TEST(Collatz, cycle_3)
+{
+  const int v = collatz_cycle(318974);
+  ASSERT_TRUE(v==1);
+}
+
+// -------
+// c_cycle
+// -------
+
+TEST(Collatz, c_cycle_1) {
+  int a[]={113, 51, 144};
+  const int v=collatz_c_cycle(4000, a, 2000);
+  ASSERT_TRUE(v==114);}
+
+TEST(Collatz, c_cycle_2) {
+  int a[]={88, 87};
+  const int v=collatz_c_cycle(11, a, 10);
+  ASSERT_TRUE(v==87);}
+
+TEST(Collatz, c_cycle_3) {
+  int a[]={113, 152, 139, 152, 258};
+  const int v=collatz_c_cycle(500008, a, 500007);
+  ASSERT_TRUE(v==152);}
+
 
 // ----
 // eval
