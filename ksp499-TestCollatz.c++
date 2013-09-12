@@ -142,8 +142,26 @@ TEST(Collatz, print_4) {
 // solve
 // -----
 
-TEST(Collatz, solve) {
+TEST(Collatz, solve_1) {
     std::istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_TRUE(w.str() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n");}
+
+TEST(Collatz, solve_2) {
+    std::istringstream r("15934 27744\n17257 8120\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "15934 27744 308\n17257 8120 276\n");}
+
+TEST(Collatz, solve_3) {
+    std::istringstream r("");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "");}
+
+TEST(Collatz, solve_4) {
+    std::istringstream r("1 2\n1 \t 2\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "1 2 2\n1 2 2\n");}
