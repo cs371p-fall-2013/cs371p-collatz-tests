@@ -1,0 +1,56 @@
+Running main() from gtest_main.cc
+[==========] Running 19 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 4 tests from CollatzRead
+[ RUN      ] CollatzRead.initialTEst
+[       OK ] CollatzRead.initialTEst (17 ms)
+[ RUN      ] CollatzRead.switchedInput
+[       OK ] CollatzRead.switchedInput (3 ms)
+[ RUN      ] CollatzRead.sameInput
+[       OK ] CollatzRead.sameInput (3 ms)
+[ RUN      ] CollatzRead.biggerInput
+[       OK ] CollatzRead.biggerInput (3 ms)
+[----------] 4 tests from CollatzRead (36 ms total)
+
+[----------] 7 tests from CollatzEval
+[ RUN      ] CollatzEval.eval_1
+[       OK ] CollatzEval.eval_1 (3 ms)
+[ RUN      ] CollatzEval.eval_2
+[       OK ] CollatzEval.eval_2 (2 ms)
+[ RUN      ] CollatzEval.eval_3
+[       OK ] CollatzEval.eval_3 (2 ms)
+[ RUN      ] CollatzEval.eval_4
+[       OK ] CollatzEval.eval_4 (2 ms)
+[ RUN      ] CollatzEval.eval_5
+[       OK ] CollatzEval.eval_5 (2 ms)
+[ RUN      ] CollatzEval.eval_6
+[       OK ] CollatzEval.eval_6 (2 ms)
+[ RUN      ] CollatzEval.eval_7
+[       OK ] CollatzEval.eval_7 (2 ms)
+[----------] 7 tests from CollatzEval (15 ms total)
+
+[----------] 4 tests from Collatzprint
+[ RUN      ] Collatzprint.defaultprint
+[       OK ] Collatzprint.defaultprint (9 ms)
+[ RUN      ] Collatzprint.simpleprint
+[       OK ] Collatzprint.simpleprint (2 ms)
+[ RUN      ] Collatzprint.reversedSimpleprint
+[       OK ] Collatzprint.reversedSimpleprint (2 ms)
+[ RUN      ] Collatzprint.bigNumbers
+[       OK ] Collatzprint.bigNumbers (2 ms)
+[----------] 4 tests from Collatzprint (16 ms total)
+
+[----------] 4 tests from Collatz
+[ RUN      ] Collatz.solve
+[       OK ] Collatz.solve (5 ms)
+[ RUN      ] Collatz.solve2
+[       OK ] Collatz.solve2 (2 ms)
+[ RUN      ] Collatz.solve3
+[       OK ] Collatz.solve3 (27 ms)
+[ RUN      ] Collatz.solve4
+[       OK ] Collatz.solve4 (32 ms)
+[----------] 4 tests from Collatz (66 ms total)
+
+[----------] Global test environment tear-down
+[==========] 19 tests from 4 test cases ran. (160 ms total)
+[  PASSED  ] 19 tests.

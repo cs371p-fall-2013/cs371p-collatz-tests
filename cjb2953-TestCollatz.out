@@ -1,81 +1,35 @@
 Running main() from gtest_main.cc
-[==========] Running 12 tests from 1 test case.
+[==========] Running 13 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 12 tests from Collatz
+[----------] 13 tests from Collatz
 [ RUN      ] Collatz.read
-[       OK ] Collatz.read (16 ms)
+[       OK ] Collatz.read (17 ms)
 [ RUN      ] Collatz.read_2
 [       OK ] Collatz.read_2 (3 ms)
 [ RUN      ] Collatz.read_3
-TestCollatz.c++:73: Failure
-Value of: i == 100
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.read_3 (20 ms)
+[       OK ] Collatz.read_3 (3 ms)
 [ RUN      ] Collatz.read_4
-TestCollatz.c++:82: Failure
-Value of: i == 1
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.read_4 (5 ms)
+[       OK ] Collatz.read_4 (3 ms)
 [ RUN      ] Collatz.eval_1
-TestCollatz.c++:91: Failure
-Value of: v == 20
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.eval_1 (3 ms)
+[       OK ] Collatz.eval_1 (3 ms)
 [ RUN      ] Collatz.eval_2
-TestCollatz.c++:95: Failure
-Value of: v == 125
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.eval_2 (3 ms)
+[       OK ] Collatz.eval_2 (2 ms)
 [ RUN      ] Collatz.eval_3
-TestCollatz.c++:99: Failure
-Value of: v == 89
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.eval_3 (4 ms)
+[       OK ] Collatz.eval_3 (2 ms)
 [ RUN      ] Collatz.eval_4
-TestCollatz.c++:103: Failure
-Value of: v == 174
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.eval_4 (3 ms)
+[       OK ] Collatz.eval_4 (655 ms)
 [ RUN      ] Collatz.print
-[       OK ] Collatz.print (9 ms)
+[       OK ] Collatz.print (10 ms)
 [ RUN      ] Collatz.print_2
-TestCollatz.c++:117: Failure
-Value of: w.str() == "1 200 125\n"
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.print_2 (3 ms)
+[       OK ] Collatz.print_2 (2 ms)
 [ RUN      ] Collatz.print_3
-TestCollatz.c++:122: Failure
-Value of: w.str() == "1 200 125\n"
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.print_3 (3 ms)
+[       OK ] Collatz.print_3 (2 ms)
 [ RUN      ] Collatz.solve
-TestCollatz.c++:132: Failure
-Value of: w.str() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n"
-  Actual: false
-Expected: true
-[  FAILED  ] Collatz.solve (6 ms)
-[----------] 12 tests from Collatz (92 ms total)
+[       OK ] Collatz.solve (4 ms)
+[ RUN      ] Collatz.solve_2
+[       OK ] Collatz.solve_2 (642 ms)
+[----------] 13 tests from Collatz (1359 ms total)
 
 [----------] Global test environment tear-down
-[==========] 12 tests from 1 test case ran. (118 ms total)
-[  PASSED  ] 3 tests.
-[  FAILED  ] 9 tests, listed below:
-[  FAILED  ] Collatz.read_3
-[  FAILED  ] Collatz.read_4
-[  FAILED  ] Collatz.eval_1
-[  FAILED  ] Collatz.eval_2
-[  FAILED  ] Collatz.eval_3
-[  FAILED  ] Collatz.eval_4
-[  FAILED  ] Collatz.print_2
-[  FAILED  ] Collatz.print_3
-[  FAILED  ] Collatz.solve
-
- 9 FAILED TESTS
+[==========] 13 tests from 1 test case ran. (1387 ms total)
+[  PASSED  ] 13 tests.
