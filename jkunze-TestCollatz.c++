@@ -38,7 +38,7 @@ To test the program:
 
 #include "Collatz.h"
 
-#define cachesize 100000
+#define cachesize 1000000
 
 // -----------
 // TestCollatz
@@ -123,46 +123,30 @@ TEST(Collatz, read_6) {
 // ------------
 
 TEST(Collatz, cycle_length_1) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
-    int v = collatz_cycle_length(1, cache);
+    int v = collatz_cycle_length(1);
     ASSERT_TRUE(v == 1);
 }
 
 TEST(Collatz, cycle_length_2) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
     int i;
     for(i = 1; i < 70; i++)
     {
-        int v = collatz_cycle_length(i, cache);
-        ASSERT_TRUE(v == collatz_cycle_length(i*2, cache)-1);
+        int v = collatz_cycle_length(i);
+        ASSERT_TRUE(v == collatz_cycle_length(i*2)-1);
     }
 }
 
 TEST(Collatz, cycle_length_3) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
     int i;
     for(i = 2; i < 280; i+=2)
     {
-        int v = collatz_cycle_length(i, cache);
-        ASSERT_TRUE(v == collatz_cycle_length(i/2, cache)+1);
+        int v = collatz_cycle_length(i);
+        ASSERT_TRUE(v == collatz_cycle_length(i/2)+1);
     }
 }
 
 TEST(Collatz, cycle_length_4) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
-    int v = collatz_cycle_length(113383, cache);
+    int v = collatz_cycle_length(113383);
     ASSERT_TRUE(v == 248);
 }
 
@@ -172,73 +156,45 @@ TEST(Collatz, cycle_length_4) {
 // ----
 
 TEST(Collatz, eval_1) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
-    const int v = collatz_eval(1, 10, cache);
+    const int v = collatz_eval(1, 10);
     ASSERT_TRUE(v == 20);}
 
 TEST(Collatz, eval_2) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
-    const int v = collatz_eval(100, 200, cache);
+    const int v = collatz_eval(100, 200);
     ASSERT_TRUE(v == 125);}
 
 TEST(Collatz, eval_3) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
-    const int v = collatz_eval(201, 210, cache);
+    const int v = collatz_eval(201, 210);
     ASSERT_TRUE(v == 89);}
 
 TEST(Collatz, eval_4) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
-    const int v = collatz_eval(900, 1000, cache);
+    const int v = collatz_eval(900, 1000);
     ASSERT_TRUE(v == 174);}
 
 TEST(Collatz, eval_5) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
     int i = 1;
     while (i < 80000)
     {
-        int v = collatz_eval(i, i, cache);
+        int v = collatz_eval(i, i);
         i *= 2;
-        ASSERT_TRUE(collatz_eval(i, i, cache) == 1 + v);
+        ASSERT_TRUE(collatz_eval(i, i) == 1 + v);
     }
 }
 
 TEST(Collatz, eval_6) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
     int i = 3;
     while (i < 80000)
     {
-        int v = collatz_eval(i, i, cache);
+        int v = collatz_eval(i, i);
         i *= 2;
-        ASSERT_TRUE(collatz_eval(i, i, cache) == 1 + v);
+        ASSERT_TRUE(collatz_eval(i, i) == 1 + v);
     }
 }
 
 TEST(Collatz, eval_7) {
-    int cache[cachesize];
-    int x = 0;
-    for(x = 0; x < cachesize; x++)
-        cache[x] = 0;
     int i = 100;
     for(; i < 500; i++)
-       ASSERT_TRUE(collatz_eval(i/2, i, cache) >= collatz_eval(1, i, cache));
+       ASSERT_TRUE(collatz_eval(i/2, i) >= collatz_eval(1, i));
 }
 
 // -----
