@@ -1,35 +1,49 @@
 Running main() from gtest_main.cc
-[==========] Running 13 tests from 1 test case.
+[==========] Running 20 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 13 tests from Collatz
-[ RUN      ] Collatz.read
-[       OK ] Collatz.read (25 ms)
-[ RUN      ] Collatz.read_2
-[       OK ] Collatz.read_2 (5 ms)
-[ RUN      ] Collatz.read_3
-[       OK ] Collatz.read_3 (12 ms)
+[----------] 20 tests from Collatz
+[ RUN      ] Collatz.read_simple
+[       OK ] Collatz.read_simple (26 ms)
+[ RUN      ] Collatz.read_backwards
+[       OK ] Collatz.read_backwards (4 ms)
+[ RUN      ] Collatz.read_empty
+[       OK ] Collatz.read_empty (4 ms)
 [ RUN      ] Collatz.eval_1
-[       OK ] Collatz.eval_1 (5 ms)
+[       OK ] Collatz.eval_1 (10 ms)
 [ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (3 ms)
+[       OK ] Collatz.eval_2 (4 ms)
 [ RUN      ] Collatz.eval_3
-[       OK ] Collatz.eval_3 (2 ms)
+[       OK ] Collatz.eval_3 (4 ms)
 [ RUN      ] Collatz.eval_4
-[       OK ] Collatz.eval_4 (2 ms)
+[       OK ] Collatz.eval_4 (4 ms)
+[ RUN      ] Collatz.eval_largest_range
+[       OK ] Collatz.eval_largest_range (1683 ms)
+[ RUN      ] Collatz.eval_backwards
+[       OK ] Collatz.eval_backwards (5 ms)
+[ RUN      ] Collatz.cycles_smallest
+[       OK ] Collatz.cycles_smallest (2 ms)
+[ RUN      ] Collatz.cycles_largest
+[       OK ] Collatz.cycles_largest (2 ms)
+[ RUN      ] Collatz.cycles_typical1
+[       OK ] Collatz.cycles_typical1 (3 ms)
+[ RUN      ] Collatz.cycles_typical2
+[       OK ] Collatz.cycles_typical2 (2 ms)
 [ RUN      ] Collatz.print
 [       OK ] Collatz.print (14 ms)
 [ RUN      ] Collatz.print_2
-[       OK ] Collatz.print_2 (4 ms)
+[       OK ] Collatz.print_2 (3 ms)
 [ RUN      ] Collatz.print_3
 [       OK ] Collatz.print_3 (3 ms)
-[ RUN      ] Collatz.solve
-[       OK ] Collatz.solve (5 ms)
-[ RUN      ] Collatz.solve_2
-[       OK ] Collatz.solve_2 (4 ms)
-[ RUN      ] Collatz.solve_3
-[       OK ] Collatz.solve_3 (4 ms)
-[----------] 13 tests from Collatz (104 ms total)
+[ RUN      ] Collatz.solve_forwards
+[       OK ] Collatz.solve_forwards (12 ms)
+[ RUN      ] Collatz.solve_backwards
+[       OK ] Collatz.solve_backwards (10 ms)
+[ RUN      ] Collatz.solve_same
+[       OK ] Collatz.solve_same (5 ms)
+[ RUN      ] Collatz.solve_no_input
+[       OK ] Collatz.solve_no_input (4 ms)
+[----------] 20 tests from Collatz (1823 ms total)
 
 [----------] Global test environment tear-down
-[==========] 13 tests from 1 test case ran. (144 ms total)
-[  PASSED  ] 13 tests.
+[==========] 20 tests from 1 test case ran. (1864 ms total)
+[  PASSED  ] 20 tests.

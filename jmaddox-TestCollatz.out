@@ -1,0 +1,21 @@
+==6253== Memcheck, a memory error detector
+==6253== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==6253== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==6253== Command: TestCollatz
+==6253== 
+TestCollatz: 1: valgrind:: not found
+==6253== 
+==6253== HEAP SUMMARY:
+==6253==     in use at exit: 844 bytes in 26 blocks
+==6253==   total heap usage: 28 allocs, 2 frees, 1,868 bytes allocated
+==6253== 
+==6253== LEAK SUMMARY:
+==6253==    definitely lost: 0 bytes in 0 blocks
+==6253==    indirectly lost: 0 bytes in 0 blocks
+==6253==      possibly lost: 0 bytes in 0 blocks
+==6253==    still reachable: 844 bytes in 26 blocks
+==6253==         suppressed: 0 bytes in 0 blocks
+==6253== Rerun with --leak-check=full to see details of leaked memory
+==6253== 
+==6253== For counts of detected and suppressed errors, rerun with: -v
+==6253== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)
