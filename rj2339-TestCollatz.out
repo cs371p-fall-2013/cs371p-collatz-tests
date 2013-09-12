@@ -7,23 +7,23 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.read_2
 [       OK ] Collatz.read_2 (5 ms)
 [ RUN      ] Collatz.read_3
-[       OK ] Collatz.read_3 (5 ms)
+[       OK ] Collatz.read_3 (4 ms)
 [ RUN      ] Collatz.eval_1
 [       OK ] Collatz.eval_1 (6 ms)
 [ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (3 ms)
+[       OK ] Collatz.eval_2 (2 ms)
 [ RUN      ] Collatz.eval_3
-[       OK ] Collatz.eval_3 (3 ms)
+[       OK ] Collatz.eval_3 (2 ms)
 [ RUN      ] Collatz.eval_4
-[       OK ] Collatz.eval_4 (3 ms)
+[       OK ] Collatz.eval_4 (2 ms)
 [ RUN      ] Collatz.cycle_length_1
 [       OK ] Collatz.cycle_length_1 (3 ms)
 [ RUN      ] Collatz.cycle_length_2
-[       OK ] Collatz.cycle_length_2 (3 ms)
+[       OK ] Collatz.cycle_length_2 (2 ms)
 [ RUN      ] Collatz.cycle_length_3
-[       OK ] Collatz.cycle_length_3 (3 ms)
+[       OK ] Collatz.cycle_length_3 (2 ms)
 [ RUN      ] Collatz.cycle_length_4
-[       OK ] Collatz.cycle_length_4 (3 ms)
+[       OK ] Collatz.cycle_length_4 (2 ms)
 [ RUN      ] Collatz.print
 [       OK ] Collatz.print (15 ms)
 [ RUN      ] Collatz.print_1
