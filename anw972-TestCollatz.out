@@ -1,0 +1,43 @@
+Running main() from gtest_main.cc
+[==========] Running 17 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 17 tests from Collatz
+[ RUN      ] Collatz.read
+[       OK ] Collatz.read (28 ms)
+[ RUN      ] Collatz.read_edge
+[       OK ] Collatz.read_edge (5 ms)
+[ RUN      ] Collatz.read_middle
+[       OK ] Collatz.read_middle (5 ms)
+[ RUN      ] Collatz.read_identical
+[       OK ] Collatz.read_identical (5 ms)
+[ RUN      ] Collatz.eval_default1
+[       OK ] Collatz.eval_default1 (5 ms)
+[ RUN      ] Collatz.eval_default2
+[       OK ] Collatz.eval_default2 (3 ms)
+[ RUN      ] Collatz.eval_default3
+[       OK ] Collatz.eval_default3 (3 ms)
+[ RUN      ] Collatz.eval_default4
+[       OK ] Collatz.eval_default4 (3 ms)
+[ RUN      ] Collatz.eval_identical1
+[       OK ] Collatz.eval_identical1 (3 ms)
+[ RUN      ] Collatz.eval_identical2
+[       OK ] Collatz.eval_identical2 (3 ms)
+[ RUN      ] Collatz.eval_backwards
+[       OK ] Collatz.eval_backwards (3 ms)
+[ RUN      ] Collatz.print1
+[       OK ] Collatz.print1 (15 ms)
+[ RUN      ] Collatz.print2
+[       OK ] Collatz.print2 (4 ms)
+[ RUN      ] Collatz.print3
+[       OK ] Collatz.print3 (3 ms)
+[ RUN      ] Collatz.solve_default
+[       OK ] Collatz.solve_default (6 ms)
+[ RUN      ] Collatz.solve_backwards
+[       OK ] Collatz.solve_backwards (4 ms)
+[ RUN      ] Collatz.solve_identicals
+[       OK ] Collatz.solve_identicals (4 ms)
+[----------] 17 tests from Collatz (120 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 1 test case ran. (164 ms total)
+[  PASSED  ] 17 tests.
