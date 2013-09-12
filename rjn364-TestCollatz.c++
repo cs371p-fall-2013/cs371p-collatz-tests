@@ -2,6 +2,7 @@
 // projects/collatz/TestCollatz.c++
 // Copyright (C) 2013
 // Glenn P. Downing
+// Robby J. Nevels
 // --------------------------------
 
 /*
