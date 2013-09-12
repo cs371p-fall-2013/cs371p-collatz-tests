@@ -90,7 +90,27 @@ TEST(Collatz, eval_3) {
 TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_TRUE(v == 174);}
+/*
+// ----
+// cycles
+// ----
 
+TEST(Collatz, cycles_1) {
+    const unsigned int v = collatz_cycles(473);
+    ASSERT_TRUE(v == 36);}
+
+TEST(Collatz, cycles_2) {
+    const unsigned int v = collatz_cycles(219);
+    ASSERT_TRUE(v == 53);}
+
+TEST(Collatz, cycles_3) {
+    const unsigned int v = collatz_cycles(98765);
+    ASSERT_TRUE(v == 54);}
+
+TEST(Collatz, cycles_4) {
+    const unsigned int v = collatz_cycles(111111);
+    ASSERT_TRUE(v == 116);}
+*/
 // -----
 // print
 // -----
