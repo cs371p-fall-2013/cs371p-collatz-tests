@@ -107,12 +107,12 @@ TEST(Collatz, eval_SMALL) {
 	ASSERT_TRUE(v == 25);}
 
 TEST(Collatz, eval_MED) {
-	const int v = collatz_eval(1, 50000);
-	ASSERT_TRUE(v == 324);}
+	const int v = collatz_eval(1, 500000);
+	ASSERT_TRUE(v == 449);}
 
 TEST(Collatz, eval_LARGE) {
-	const int v = collatz_eval(50000, 100000);
-	ASSERT_TRUE(v == 351);}
+	const int v = collatz_eval(1, 999999);
+	ASSERT_TRUE(v == 525);}
 
 
 // -----
