@@ -75,6 +75,24 @@ TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_TRUE(v == 174);}
 
+// ----
+// evalSingleNum
+// ----
+
+TEST(Collatz, evalSingleNum_1) {
+    const int v = collatz_evalSingleNum(10);
+    ASSERT_TRUE(v == 7);}
+TEST(Collatz, evalSingleNum_2) {
+    const int v = collatz_evalSingleNum(16);
+    ASSERT_TRUE(v == 5);}
+TEST(Collatz, evalSingleNum_3) {
+    const int v = collatz_evalSingleNum(1);
+    ASSERT_TRUE(v == 1);}
+TEST(Collatz, evalSingleNum_4) {
+    const int v = collatz_evalSingleNum(904686);
+    ASSERT_TRUE(v == 96);
+}
+
 // -----
 // print
 // -----
