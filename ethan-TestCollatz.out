@@ -1,0 +1,49 @@
+Running main() from gtest_main.cc
+[==========] Running 17 tests from 3 test cases.
+[----------] Global test environment set-up.
+[----------] 4 tests from CollatzRead
+[ RUN      ] CollatzRead.SimpleIn
+[       OK ] CollatzRead.SimpleIn (17 ms)
+[ RUN      ] CollatzRead.SameIn
+[       OK ] CollatzRead.SameIn (3 ms)
+[ RUN      ] CollatzRead.SpaceIn
+[       OK ] CollatzRead.SpaceIn (3 ms)
+[ RUN      ] CollatzRead.NoIn
+[       OK ] CollatzRead.NoIn (3 ms)
+[----------] 4 tests from CollatzRead (35 ms total)
+
+[----------] 12 tests from Collatz
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (3 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (2 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (2 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (2 ms)
+[ RUN      ] Collatz.eval_lowbound
+[       OK ] Collatz.eval_lowbound (2 ms)
+[ RUN      ] Collatz.eval_highbound
+[       OK ] Collatz.eval_highbound (1 ms)
+[ RUN      ] Collatz.print_basic
+[       OK ] Collatz.print_basic (10 ms)
+[ RUN      ] Collatz.print_lowbound
+[       OK ] Collatz.print_lowbound (2 ms)
+[ RUN      ] Collatz.print_highbound
+[       OK ] Collatz.print_highbound (2 ms)
+[ RUN      ] Collatz.solve_basic
+[       OK ] Collatz.solve_basic (3 ms)
+[ RUN      ] Collatz.solve_empty
+[       OK ] Collatz.solve_empty (3 ms)
+[ RUN      ] Collatz.solve_single
+[       OK ] Collatz.solve_single (3 ms)
+[----------] 12 tests from Collatz (35 ms total)
+
+[----------] 1 test from Collatzprint
+[ RUN      ] Collatzprint.bigNumbers
+[       OK ] Collatzprint.bigNumbers (2 ms)
+[----------] 1 test from Collatzprint (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 3 test cases ran. (100 ms total)
+[  PASSED  ] 17 tests.

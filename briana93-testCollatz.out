@@ -1,0 +1,59 @@
+Running main() from gtest_main.cc
+[==========] Running 23 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 23 tests from Collatz
+[ RUN      ] Collatz.read
+[       OK ] Collatz.read (17 ms)
+[ RUN      ] Collatz.read_Jlessthani
+[       OK ] Collatz.read_Jlessthani (3 ms)
+[ RUN      ] Collatz.read_Duplicate
+[       OK ] Collatz.read_Duplicate (3 ms)
+[ RUN      ] Collatz.read_LargeRange
+[       OK ] Collatz.read_LargeRange (3 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (3 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (2 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (1 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (3 ms)
+[ RUN      ] Collatz.eval_duplicate
+[       OK ] Collatz.eval_duplicate (2 ms)
+[ RUN      ] Collatz.eval_jLessThani
+[       OK ] Collatz.eval_jLessThani (2 ms)
+[ RUN      ] Collatz.eval_largeRange
+[       OK ] Collatz.eval_largeRange (101 ms)
+[ RUN      ] Collatz.print_1
+[       OK ] Collatz.print_1 (10 ms)
+[ RUN      ] Collatz.print_2
+[       OK ] Collatz.print_2 (2 ms)
+[ RUN      ] Collatz.print_3
+[       OK ] Collatz.print_3 (2 ms)
+[ RUN      ] Collatz.print_4
+[       OK ] Collatz.print_4 (2 ms)
+[ RUN      ] Collatz.print_5
+[       OK ] Collatz.print_5 (2 ms)
+[ RUN      ] Collatz.solve
+1 10 20
+100 200 125
+201 210 89
+900 1000 174
+[       OK ] Collatz.solve (4 ms)
+[ RUN      ] Collatz.solve_average
+[       OK ] Collatz.solve_average (2 ms)
+[ RUN      ] Collatz.solve_noinput
+[       OK ] Collatz.solve_noinput (3 ms)
+[ RUN      ] Collatz.solve_largeRange
+[       OK ] Collatz.solve_largeRange (3 ms)
+[ RUN      ] Collatz.doCollatz_1
+[       OK ] Collatz.doCollatz_1 (1 ms)
+[ RUN      ] Collatz.doCollatz_2
+[       OK ] Collatz.doCollatz_2 (1 ms)
+[ RUN      ] Collatz.doCollatz_3
+[       OK ] Collatz.doCollatz_3 (2 ms)
+[----------] 23 tests from Collatz (187 ms total)
+
+[----------] Global test environment tear-down
+[==========] 23 tests from 1 test case ran. (214 ms total)
+[  PASSED  ] 23 tests.
