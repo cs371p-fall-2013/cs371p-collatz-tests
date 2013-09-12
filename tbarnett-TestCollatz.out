@@ -15,17 +15,17 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.eval_test
 [       OK ] Collatz.eval_test (11 ms)
 [ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (4 ms)
+[       OK ] Collatz.eval_2 (3 ms)
 [ RUN      ] Collatz.eval_3
-[       OK ] Collatz.eval_3 (4 ms)
+[       OK ] Collatz.eval_3 (3 ms)
 [ RUN      ] Collatz.eval_4
 [       OK ] Collatz.eval_4 (4 ms)
 [ RUN      ] Collatz.eval_5
 [       OK ] Collatz.eval_5 (4 ms)
 [ RUN      ] Collatz.eval_smallest_largest
-[       OK ] Collatz.eval_smallest_largest (1725 ms)
+[       OK ] Collatz.eval_smallest_largest (1932 ms)
 [ RUN      ] Collatz.eval_same_largest
-[       OK ] Collatz.eval_same_largest (4 ms)
+[       OK ] Collatz.eval_same_largest (3 ms)
 [ RUN      ] Collatz.eval_reverse
 [       OK ] Collatz.eval_reverse (4 ms)
 [ RUN      ] Collatz.eval_same_ones
@@ -44,8 +44,8 @@ Running main() from gtest_main.cc
 [       OK ] Collatz.solve_multi_line (10 ms)
 [ RUN      ] Collatz.solve_empty
 [       OK ] Collatz.solve_empty (3 ms)
-[----------] 21 tests from Collatz (1837 ms total)
+[----------] 21 tests from Collatz (2041 ms total)
 
 [----------] Global test environment tear-down
-[==========] 21 tests from 1 test case ran. (1863 ms total)
+[==========] 21 tests from 1 test case ran. (2067 ms total)
 [  PASSED  ] 21 tests.
