@@ -1,0 +1,51 @@
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 21 tests from Collatz
+[ RUN      ] Collatz.ReadNormal
+[       OK ] Collatz.ReadNormal (17 ms)
+[ RUN      ] Collatz.ReadReverseInput
+[       OK ] Collatz.ReadReverseInput (3 ms)
+[ RUN      ] Collatz.ReadBadInput
+[       OK ] Collatz.ReadBadInput (3 ms)
+[ RUN      ] Collatz.ReadMultiline
+[       OK ] Collatz.ReadMultiline (5 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (3 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (2 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (1 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (2 ms)
+[ RUN      ] Collatz.EvalIdenticalInput
+[       OK ] Collatz.EvalIdenticalInput (2 ms)
+[ RUN      ] Collatz.EvalReverseInput
+[       OK ] Collatz.EvalReverseInput (2 ms)
+[ RUN      ] Collatz.do_collatz_1
+[       OK ] Collatz.do_collatz_1 (1 ms)
+[ RUN      ] Collatz.do_collatz_2
+[       OK ] Collatz.do_collatz_2 (2 ms)
+[ RUN      ] Collatz.do_collatz_3
+[       OK ] Collatz.do_collatz_3 (1 ms)
+[ RUN      ] Collatz.do_collatz_4
+[       OK ] Collatz.do_collatz_4 (2 ms)
+[ RUN      ] Collatz.print_1
+[       OK ] Collatz.print_1 (10 ms)
+[ RUN      ] Collatz.print_2
+[       OK ] Collatz.print_2 (2 ms)
+[ RUN      ] Collatz.print_3
+[       OK ] Collatz.print_3 (2 ms)
+[ RUN      ] Collatz.SolveMultiline
+[       OK ] Collatz.SolveMultiline (4 ms)
+[ RUN      ] Collatz.SolveReverseMultiline
+[       OK ] Collatz.SolveReverseMultiline (3 ms)
+[ RUN      ] Collatz.SolveReverseInput
+[       OK ] Collatz.SolveReverseInput (2 ms)
+[ RUN      ] Collatz.SolveIdenticalInput
+[       OK ] Collatz.SolveIdenticalInput (2 ms)
+[----------] 21 tests from Collatz (82 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 1 test case ran. (108 ms total)
+[  PASSED  ] 21 tests.
