@@ -81,16 +81,8 @@ TEST(Collatz, read_4) {
     const bool b = collatz_read(r, i, j);
     ASSERT_TRUE(b == false);}
 
-TEST(CollatzRead, initialTEst) {
-    std::istringstream r("1 10\n");
-    int i;
-    int j;
-    const bool b = collatz_read(r, i, j);
-    ASSERT_TRUE(b == true);
-    ASSERT_TRUE(i == 1);
-    ASSERT_TRUE(j == 10);}
 
-TEST(CollatzRead, switchedInput) {
+TEST(CollatzRead, read_5) {
     std::istringstream r("10 1\n");
     int i;
     int j;
@@ -98,7 +90,8 @@ TEST(CollatzRead, switchedInput) {
     ASSERT_TRUE(b == true);
     ASSERT_TRUE(i == 10);
     ASSERT_TRUE(j == 1);}
-TEST(CollatzRead, sameInput) {
+
+TEST(CollatzRead, read_6) {
     std::istringstream r("5 5\n");
     int i;
     int j;
@@ -107,7 +100,8 @@ TEST(CollatzRead, sameInput) {
     ASSERT_TRUE(i == 5);
     ASSERT_TRUE(j == 5);
     ASSERT_TRUE(i == j);}
-TEST(CollatzRead, biggerInput) {
+
+TEST(CollatzRead, read_7) {
     std::istringstream r("5000 10000\n");
     int i;
     int j;
@@ -149,6 +143,31 @@ TEST(Collatz, eval_7) {
     const int v = collatz_eval(16, 150);
     ASSERT_TRUE(v == 122);}
 
+TEST(Collatz, eval_8) {
+    const int v = collatz_eval(1000, 2000);
+    ASSERT_TRUE(v == 182);}
+
+TEST(Collatz, eval_9) {
+    const int v = collatz_eval(12345, 123456);
+    ASSERT_TRUE(v == 354);}
+
+TEST(Collatz, eval_10){
+    const int v = collatz_eval(3225, 11789);
+    ASSERT_TRUE(v == 268);}
+
+TEST(Collatz, eval_11) {
+    const int v = collatz_eval(10, 10);
+    ASSERT_TRUE(v == 7);}
+
+TEST(Collatz, eval_12) {
+    const int v = collatz_eval(100, 1);
+    ASSERT_TRUE(v == 119);}
+
+
+TEST(Collatz, eval_13){
+    const int v = collatz_eval(6701, 4832);
+    ASSERT_TRUE(v == 262);}
+
 
 // -----
 // print
@@ -174,22 +193,22 @@ TEST(Collatz, print_4) {
     collatz_print(w, 5, 50, 52);
     ASSERT_TRUE(w.str() == "5 50 52\n");}
 
-TEST(Collatzprint, defaultprint) {
+TEST(Collatzprint, print_5) {
     std::ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_TRUE(w.str() == "1 10 20\n");}
 
-TEST(Collatzprint, simpleprint) {
+TEST(Collatzprint, print_6) {
     std::ostringstream w;
     collatz_print(w, 1, 2, 3);
     ASSERT_TRUE(w.str() == "1 2 3\n");}
 
-TEST(Collatzprint, reversedSimpleprint) {
+TEST(Collatzprint, print_7) {
     std::ostringstream w;
     collatz_print(w, 3, 2, 1);
     ASSERT_TRUE(w.str() == "3 2 1\n");}
 
-TEST(Collatzprint, bigNumbers) {
+TEST(Collatzprint, print_8) {
     std::ostringstream w;
     collatz_print(w, 12345, 98765, 43210);
     ASSERT_TRUE(w.str() == "12345 98765 43210\n");}

@@ -1,7 +1,7 @@
 Running main() from gtest_main.cc
-[==========] Running 30 tests from 3 test cases.
+[==========] Running 35 tests from 3 test cases.
 [----------] Global test environment set-up.
-[----------] 22 tests from Collatz
+[----------] 28 tests from Collatz
 [ RUN      ] Collatz.read_1
 [       OK ] Collatz.read_1 (17 ms)
 [ RUN      ] Collatz.read_2
@@ -11,9 +11,9 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.read_4
 [       OK ] Collatz.read_4 (3 ms)
 [ RUN      ] Collatz.eval_1
-[       OK ] Collatz.eval_1 (2 ms)
+[       OK ] Collatz.eval_1 (3 ms)
 [ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (1 ms)
+[       OK ] Collatz.eval_2 (2 ms)
 [ RUN      ] Collatz.eval_3
 [       OK ] Collatz.eval_3 (2 ms)
 [ RUN      ] Collatz.eval_4
@@ -21,9 +21,21 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.eval_5
 [       OK ] Collatz.eval_5 (2 ms)
 [ RUN      ] Collatz.eval_6
-[       OK ] Collatz.eval_6 (2 ms)
+[       OK ] Collatz.eval_6 (1 ms)
 [ RUN      ] Collatz.eval_7
-[       OK ] Collatz.eval_7 (2 ms)
+[       OK ] Collatz.eval_7 (1 ms)
+[ RUN      ] Collatz.eval_8
+[       OK ] Collatz.eval_8 (2 ms)
+[ RUN      ] Collatz.eval_9
+[       OK ] Collatz.eval_9 (45 ms)
+[ RUN      ] Collatz.eval_10
+[       OK ] Collatz.eval_10 (3 ms)
+[ RUN      ] Collatz.eval_11
+[       OK ] Collatz.eval_11 (2 ms)
+[ RUN      ] Collatz.eval_12
+[       OK ] Collatz.eval_12 (3 ms)
+[ RUN      ] Collatz.eval_13
+[       OK ] Collatz.eval_13 (2 ms)
 [ RUN      ] Collatz.print_1
 [       OK ] Collatz.print_1 (9 ms)
 [ RUN      ] Collatz.print_2
@@ -43,33 +55,31 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.solve_5
 [       OK ] Collatz.solve_5 (2 ms)
 [ RUN      ] Collatz.solve_6
-[       OK ] Collatz.solve_6 (13 ms)
+[       OK ] Collatz.solve_6 (3 ms)
 [ RUN      ] Collatz.solve_7
-[       OK ] Collatz.solve_7 (18 ms)
-[----------] 22 tests from Collatz (111 ms total)
+[       OK ] Collatz.solve_7 (3 ms)
+[----------] 28 tests from Collatz (142 ms total)
 
-[----------] 4 tests from CollatzRead
-[ RUN      ] CollatzRead.initialTEst
-[       OK ] CollatzRead.initialTEst (3 ms)
-[ RUN      ] CollatzRead.switchedInput
-[       OK ] CollatzRead.switchedInput (3 ms)
-[ RUN      ] CollatzRead.sameInput
-[       OK ] CollatzRead.sameInput (4 ms)
-[ RUN      ] CollatzRead.biggerInput
-[       OK ] CollatzRead.biggerInput (3 ms)
-[----------] 4 tests from CollatzRead (13 ms total)
+[----------] 3 tests from CollatzRead
+[ RUN      ] CollatzRead.read_5
+[       OK ] CollatzRead.read_5 (4 ms)
+[ RUN      ] CollatzRead.read_6
+[       OK ] CollatzRead.read_6 (3 ms)
+[ RUN      ] CollatzRead.read_7
+[       OK ] CollatzRead.read_7 (3 ms)
+[----------] 3 tests from CollatzRead (11 ms total)
 
 [----------] 4 tests from Collatzprint
-[ RUN      ] Collatzprint.defaultprint
-[       OK ] Collatzprint.defaultprint (2 ms)
-[ RUN      ] Collatzprint.simpleprint
-[       OK ] Collatzprint.simpleprint (1 ms)
-[ RUN      ] Collatzprint.reversedSimpleprint
-[       OK ] Collatzprint.reversedSimpleprint (2 ms)
-[ RUN      ] Collatzprint.bigNumbers
-[       OK ] Collatzprint.bigNumbers (2 ms)
+[ RUN      ] Collatzprint.print_5
+[       OK ] Collatzprint.print_5 (2 ms)
+[ RUN      ] Collatzprint.print_6
+[       OK ] Collatzprint.print_6 (2 ms)
+[ RUN      ] Collatzprint.print_7
+[       OK ] Collatzprint.print_7 (2 ms)
+[ RUN      ] Collatzprint.print_8
+[       OK ] Collatzprint.print_8 (2 ms)
 [----------] 4 tests from Collatzprint (9 ms total)
 
 [----------] Global test environment tear-down
-[==========] 30 tests from 3 test cases ran. (161 ms total)
-[  PASSED  ] 30 tests.
+[==========] 35 tests from 3 test cases ran. (189 ms total)
+[  PASSED  ] 35 tests.
