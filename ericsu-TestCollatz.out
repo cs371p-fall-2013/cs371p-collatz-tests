@@ -1,0 +1,67 @@
+Running main() from gtest_main.cc
+[==========] Running 29 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 29 tests from Collatz
+[ RUN      ] Collatz.read
+[       OK ] Collatz.read (16 ms)
+[ RUN      ] Collatz.read_same
+[       OK ] Collatz.read_same (3 ms)
+[ RUN      ] Collatz.read_descending
+[       OK ] Collatz.read_descending (3 ms)
+[ RUN      ] Collatz.read_large
+[       OK ] Collatz.read_large (3 ms)
+[ RUN      ] Collatz.read_oneone
+[       OK ] Collatz.read_oneone (3 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (4 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (2 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (2 ms)
+[ RUN      ] Collatz.eval_large
+[       OK ] Collatz.eval_large (2 ms)
+[ RUN      ] Collatz.eval_same_numbers
+[       OK ] Collatz.eval_same_numbers (2 ms)
+[ RUN      ] Collatz.eval_diff_of_one
+[       OK ] Collatz.eval_diff_of_one (2 ms)
+[ RUN      ] Collatz.eval_reverse
+[       OK ] Collatz.eval_reverse (2 ms)
+[ RUN      ] Collatz.swap_typical
+[       OK ] Collatz.swap_typical (2 ms)
+[ RUN      ] Collatz.swap_same_numbers
+[       OK ] Collatz.swap_same_numbers (1 ms)
+[ RUN      ] Collatz.swap_large_and_small
+[       OK ] Collatz.swap_large_and_small (1 ms)
+[ RUN      ] Collatz.algorithm_reverse
+[       OK ] Collatz.algorithm_reverse (2 ms)
+[ RUN      ] Collatz.algorithm_same_numbers
+[       OK ] Collatz.algorithm_same_numbers (2 ms)
+[ RUN      ] Collatz.algorithm_small_and_large
+[       OK ] Collatz.algorithm_small_and_large (11 ms)
+[ RUN      ] Collatz.find_max_same
+[       OK ] Collatz.find_max_same (2 ms)
+[ RUN      ] Collatz.find_max_small_and_large
+[       OK ] Collatz.find_max_small_and_large (2 ms)
+[ RUN      ] Collatz.find_max_large_and_small
+[       OK ] Collatz.find_max_large_and_small (2 ms)
+[ RUN      ] Collatz.print
+[       OK ] Collatz.print (9 ms)
+[ RUN      ] Collatz.print_small
+[       OK ] Collatz.print_small (2 ms)
+[ RUN      ] Collatz.print_large
+[       OK ] Collatz.print_large (2 ms)
+[ RUN      ] Collatz.print_typical
+[       OK ] Collatz.print_typical (2 ms)
+[ RUN      ] Collatz.solve_typical
+[       OK ] Collatz.solve_typical (4 ms)
+[ RUN      ] Collatz.solve_blank
+[       OK ] Collatz.solve_blank (3 ms)
+[ RUN      ] Collatz.solve_same_numbers
+[       OK ] Collatz.solve_same_numbers (3 ms)
+[ RUN      ] Collatz.solve_several_same_numbers
+[       OK ] Collatz.solve_several_same_numbers (3 ms)
+[----------] 29 tests from Collatz (109 ms total)
+
+[----------] Global test environment tear-down
+[==========] 29 tests from 1 test case ran. (134 ms total)
+[  PASSED  ] 29 tests.
