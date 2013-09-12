@@ -1,0 +1,57 @@
+Running main() from gtest_main.cc
+[==========] Running 24 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 24 tests from Collatz
+[ RUN      ] Collatz.read1
+[       OK ] Collatz.read1 (17 ms)
+[ RUN      ] Collatz.read2
+[       OK ] Collatz.read2 (3 ms)
+[ RUN      ] Collatz.read3
+[       OK ] Collatz.read3 (3 ms)
+[ RUN      ] Collatz.read4
+[       OK ] Collatz.read4 (3 ms)
+[ RUN      ] Collatz.length1
+[       OK ] Collatz.length1 (2 ms)
+[ RUN      ] Collatz.length2
+[       OK ] Collatz.length2 (2 ms)
+[ RUN      ] Collatz.length3
+[       OK ] Collatz.length3 (2 ms)
+[ RUN      ] Collatz.length4
+[       OK ] Collatz.length4 (2 ms)
+[ RUN      ] Collatz.eval1
+[       OK ] Collatz.eval1 (2 ms)
+[ RUN      ] Collatz.eval2
+[       OK ] Collatz.eval2 (2 ms)
+[ RUN      ] Collatz.eval3
+[       OK ] Collatz.eval3 (2 ms)
+[ RUN      ] Collatz.eval4
+[       OK ] Collatz.eval4 (2 ms)
+[ RUN      ] Collatz.eval5
+[       OK ] Collatz.eval5 (2917 ms)
+[ RUN      ] Collatz.eval6
+[       OK ] Collatz.eval6 (2 ms)
+[ RUN      ] Collatz.eval7
+[       OK ] Collatz.eval7 (2 ms)
+[ RUN      ] Collatz.eval8
+[       OK ] Collatz.eval8 (2913 ms)
+[ RUN      ] Collatz.print1
+[       OK ] Collatz.print1 (9 ms)
+[ RUN      ] Collatz.print2
+[       OK ] Collatz.print2 (2 ms)
+[ RUN      ] Collatz.print3
+[       OK ] Collatz.print3 (2 ms)
+[ RUN      ] Collatz.print4
+[       OK ] Collatz.print4 (2 ms)
+[ RUN      ] Collatz.print5
+[       OK ] Collatz.print5 (2 ms)
+[ RUN      ] Collatz.solve1
+[       OK ] Collatz.solve1 (4 ms)
+[ RUN      ] Collatz.solve2
+[       OK ] Collatz.solve2 (19 ms)
+[ RUN      ] Collatz.solve3
+[       OK ] Collatz.solve3 (263 ms)
+[----------] 24 tests from Collatz (6190 ms total)
+
+[----------] Global test environment tear-down
+[==========] 24 tests from 1 test case ran. (6217 ms total)
+[  PASSED  ] 24 tests.
