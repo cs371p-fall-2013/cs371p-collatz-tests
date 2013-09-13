@@ -137,6 +137,30 @@ TEST(Collatz, eval_max_input) {
 TEST(Collatz, eval_big_backwards_input) {
     const int v = collatz_eval(1000, 900);
     ASSERT_TRUE(v == 174);}
+
+// ----
+// eval_single
+// ----
+
+TEST(Collatz, eval_single_min) {
+    const int v = collatz_eval_single(1);
+    ASSERT_TRUE(v == 1);}
+
+TEST(Collatz, eval_single_even) {
+    const int v = collatz_eval_single(10);
+    ASSERT_TRUE(v == 7);}
+	
+TEST(Collatz, eval_single_odd) {
+    const int v = collatz_eval_single(11);
+    ASSERT_TRUE(v == 15);}
+
+TEST(Collatz, eval_single_higher) {
+    const int v = collatz_eval_single(4567);
+    ASSERT_TRUE(v == 60);}
+	
+TEST(Collatz, eval_single_max) {
+    const int v = collatz_eval_single(999999);
+    ASSERT_TRUE(v == 259);}
 	
 // -----
 // print

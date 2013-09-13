@@ -1,11 +1,11 @@
 Running main() from gtest_main.cc
-[==========] Running 24 tests from 1 test case.
+[==========] Running 29 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 24 tests from Collatz
+[----------] 29 tests from Collatz
 [ RUN      ] Collatz.read_small_input
 [       OK ] Collatz.read_small_input (17 ms)
 [ RUN      ] Collatz.read_same_input
-[       OK ] Collatz.read_same_input (3 ms)
+[       OK ] Collatz.read_same_input (4 ms)
 [ RUN      ] Collatz.read_double_input
 [       OK ] Collatz.read_double_input (5 ms)
 [ RUN      ] Collatz.read_max_input
@@ -15,9 +15,9 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.read_backwards_input
 [       OK ] Collatz.read_backwards_input (3 ms)
 [ RUN      ] Collatz.eval_tiny_input
-[       OK ] Collatz.eval_tiny_input (3 ms)
+[       OK ] Collatz.eval_tiny_input (4 ms)
 [ RUN      ] Collatz.eval_small_input
-[       OK ] Collatz.eval_small_input (1 ms)
+[       OK ] Collatz.eval_small_input (2 ms)
 [ RUN      ] Collatz.eval_medium_input
 [       OK ] Collatz.eval_medium_input (1 ms)
 [ RUN      ] Collatz.eval_larger_input
@@ -30,6 +30,16 @@ Running main() from gtest_main.cc
 [       OK ] Collatz.eval_max_input (2 ms)
 [ RUN      ] Collatz.eval_big_backwards_input
 [       OK ] Collatz.eval_big_backwards_input (2 ms)
+[ RUN      ] Collatz.eval_single_min
+[       OK ] Collatz.eval_single_min (1 ms)
+[ RUN      ] Collatz.eval_single_even
+[       OK ] Collatz.eval_single_even (1 ms)
+[ RUN      ] Collatz.eval_single_odd
+[       OK ] Collatz.eval_single_odd (2 ms)
+[ RUN      ] Collatz.eval_single_higher
+[       OK ] Collatz.eval_single_higher (2 ms)
+[ RUN      ] Collatz.eval_single_max
+[       OK ] Collatz.eval_single_max (2 ms)
 [ RUN      ] Collatz.print_normal_output
 [       OK ] Collatz.print_normal_output (9 ms)
 [ RUN      ] Collatz.print_same_output
@@ -43,15 +53,15 @@ Running main() from gtest_main.cc
 [ RUN      ] Collatz.solve_small
 [       OK ] Collatz.solve_small (2 ms)
 [ RUN      ] Collatz.solve_different_order
-[       OK ] Collatz.solve_different_order (3 ms)
+[       OK ] Collatz.solve_different_order (2 ms)
 [ RUN      ] Collatz.solve_min
 [       OK ] Collatz.solve_min (3 ms)
 [ RUN      ] Collatz.solve_max
 [       OK ] Collatz.solve_max (2 ms)
 [ RUN      ] Collatz.solve_backwards
-[       OK ] Collatz.solve_backwards (3 ms)
-[----------] 24 tests from Collatz (91 ms total)
+[       OK ] Collatz.solve_backwards (2 ms)
+[----------] 29 tests from Collatz (107 ms total)
 
 [----------] Global test environment tear-down
-[==========] 24 tests from 1 test case ran. (118 ms total)
-[  PASSED  ] 24 tests.
+[==========] 29 tests from 1 test case ran. (136 ms total)
+[  PASSED  ] 29 tests.
