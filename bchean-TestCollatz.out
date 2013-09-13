@@ -1,0 +1,63 @@
+Running main() from gtest_main.cc
+[==========] Running 21 tests from 5 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from CollatzReadTest
+[ RUN      ] CollatzReadTest.BasicInput
+[       OK ] CollatzReadTest.BasicInput (17 ms)
+[ RUN      ] CollatzReadTest.ReverseInput
+[       OK ] CollatzReadTest.ReverseInput (3 ms)
+[ RUN      ] CollatzReadTest.IdenticalInput
+[       OK ] CollatzReadTest.IdenticalInput (3 ms)
+[----------] 3 tests from CollatzReadTest (33 ms total)
+
+[----------] 10 tests from CollatzEvalTest
+[ RUN      ] CollatzEvalTest.BasicInput
+[       OK ] CollatzEvalTest.BasicInput (2 ms)
+[ RUN      ] CollatzEvalTest.ReverseInput
+[       OK ] CollatzEvalTest.ReverseInput (1 ms)
+[ RUN      ] CollatzEvalTest.IdenticalInput
+[       OK ] CollatzEvalTest.IdenticalInput (2 ms)
+[ RUN      ] CollatzEvalTest.LargerGapInput
+[       OK ] CollatzEvalTest.LargerGapInput (2 ms)
+[ RUN      ] CollatzEvalTest.LowBoundaryBasicInput
+[       OK ] CollatzEvalTest.LowBoundaryBasicInput (1 ms)
+[ RUN      ] CollatzEvalTest.LowBoundaryReverseInput
+[       OK ] CollatzEvalTest.LowBoundaryReverseInput (2 ms)
+[ RUN      ] CollatzEvalTest.LowBoundaryIdenticalInput
+[       OK ] CollatzEvalTest.LowBoundaryIdenticalInput (1 ms)
+[ RUN      ] CollatzEvalTest.HighBoundaryBasicInput
+[       OK ] CollatzEvalTest.HighBoundaryBasicInput (1 ms)
+[ RUN      ] CollatzEvalTest.HighBoundaryReverseInput
+[       OK ] CollatzEvalTest.HighBoundaryReverseInput (2 ms)
+[ RUN      ] CollatzEvalTest.HighBoundaryIdenticalInput
+[       OK ] CollatzEvalTest.HighBoundaryIdenticalInput (1 ms)
+[----------] 10 tests from CollatzEvalTest (18 ms total)
+
+[----------] 3 tests from CollatzCycleLengthTest
+[ RUN      ] CollatzCycleLengthTest.Basic
+[       OK ] CollatzCycleLengthTest.Basic (1 ms)
+[ RUN      ] CollatzCycleLengthTest.LowBoundary
+[       OK ] CollatzCycleLengthTest.LowBoundary (2 ms)
+[ RUN      ] CollatzCycleLengthTest.HighBoundary
+[       OK ] CollatzCycleLengthTest.HighBoundary (1 ms)
+[----------] 3 tests from CollatzCycleLengthTest (4 ms total)
+
+[----------] 2 tests from CollatzPrintTest
+[ RUN      ] CollatzPrintTest.BasicInput
+[       OK ] CollatzPrintTest.BasicInput (9 ms)
+[ RUN      ] CollatzPrintTest.DifferentOrderInput
+[       OK ] CollatzPrintTest.DifferentOrderInput (2 ms)
+[----------] 2 tests from CollatzPrintTest (11 ms total)
+
+[----------] 3 tests from CollatzSolveTest
+[ RUN      ] CollatzSolveTest.SingleLineInput
+[       OK ] CollatzSolveTest.SingleLineInput (4 ms)
+[ RUN      ] CollatzSolveTest.MultipleLineInput
+[       OK ] CollatzSolveTest.MultipleLineInput (2 ms)
+[ RUN      ] CollatzSolveTest.EmptyInput
+[       OK ] CollatzSolveTest.EmptyInput (3 ms)
+[----------] 3 tests from CollatzSolveTest (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 21 tests from 5 test cases ran. (104 ms total)
+[  PASSED  ] 21 tests.

@@ -1,0 +1,43 @@
+Running main() from gtest_main.cc
+[==========] Running 17 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 17 tests from Collatz
+[ RUN      ] Collatz.read
+[       OK ] Collatz.read (17 ms)
+[ RUN      ] Collatz.read_reverse_order
+[       OK ] Collatz.read_reverse_order (3 ms)
+[ RUN      ] Collatz.read_large_values
+[       OK ] Collatz.read_large_values (3 ms)
+[ RUN      ] Collatz.read_multiple
+[       OK ] Collatz.read_multiple (4 ms)
+[ RUN      ] Collatz.cycle_length
+[       OK ] Collatz.cycle_length (1 ms)
+[ RUN      ] Collatz.cycle_length_2
+[       OK ] Collatz.cycle_length_2 (2 ms)
+[ RUN      ] Collatz.cycle_length_3
+[       OK ] Collatz.cycle_length_3 (1 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (2 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (2 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (2 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (3 ms)
+[ RUN      ] Collatz.print
+[       OK ] Collatz.print (9 ms)
+[ RUN      ] Collatz.print_multiple
+[       OK ] Collatz.print_multiple (3 ms)
+[ RUN      ] Collatz.print_large
+[       OK ] Collatz.print_large (2 ms)
+[ RUN      ] Collatz.solve
+[       OK ] Collatz.solve (5 ms)
+[ RUN      ] Collatz.solve_reverse_input
+[       OK ] Collatz.solve_reverse_input (2 ms)
+[ RUN      ] Collatz.solve_same_enpoints
+[       OK ] Collatz.solve_same_enpoints (2 ms)
+[----------] 17 tests from Collatz (77 ms total)
+
+[----------] Global test environment tear-down
+[==========] 17 tests from 1 test case ran. (103 ms total)
+[  PASSED  ] 17 tests.

@@ -1,0 +1,53 @@
+Running main() from gtest_main.cc
+[==========] Running 22 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 22 tests from Collatz
+[ RUN      ] Collatz.read
+[       OK ] Collatz.read (17 ms)
+[ RUN      ] Collatz.rev_input
+[       OK ] Collatz.rev_input (3 ms)
+[ RUN      ] Collatz.equal_inputs
+[       OK ] Collatz.equal_inputs (3 ms)
+[ RUN      ] Collatz.high_input
+[       OK ] Collatz.high_input (3 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (37 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (31 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (31 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (31 ms)
+[ RUN      ] Collatz.eval_upper
+[       OK ] Collatz.eval_upper (2205 ms)
+[ RUN      ] Collatz.rev_eval_upper
+[       OK ] Collatz.rev_eval_upper (2208 ms)
+[ RUN      ] Collatz.same_input
+[       OK ] Collatz.same_input (30 ms)
+[ RUN      ] Collatz.print
+[       OK ] Collatz.print (9 ms)
+[ RUN      ] Collatz.print2
+[       OK ] Collatz.print2 (2 ms)
+[ RUN      ] Collatz.print3
+[       OK ] Collatz.print3 (2 ms)
+[ RUN      ] Collatz.print4
+[       OK ] Collatz.print4 (2 ms)
+[ RUN      ] Collatz.upper_bound
+[       OK ] Collatz.upper_bound (2 ms)
+[ RUN      ] Collatz.rev_upper_bound
+[       OK ] Collatz.rev_upper_bound (2 ms)
+[ RUN      ] Collatz.equal_input
+[       OK ] Collatz.equal_input (2 ms)
+[ RUN      ] Collatz.solve
+[       OK ] Collatz.solve (118 ms)
+[ RUN      ] Collatz.solve_reverse
+[       OK ] Collatz.solve_reverse (116 ms)
+[ RUN      ] Collatz.extreme_cases
+[       OK ] Collatz.extreme_cases (4372 ms)
+[ RUN      ] Collatz.empty
+[       OK ] Collatz.empty (3 ms)
+[----------] 22 tests from Collatz (9241 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 1 test case ran. (9267 ms total)
+[  PASSED  ] 22 tests.

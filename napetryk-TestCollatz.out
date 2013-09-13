@@ -1,0 +1,53 @@
+Running main() from gtest_main.cc
+[==========] Running 22 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 22 tests from Collatz
+[ RUN      ] Collatz.read_1
+[       OK ] Collatz.read_1 (0 ms)
+[ RUN      ] Collatz.read_2
+[       OK ] Collatz.read_2 (0 ms)
+[ RUN      ] Collatz.read_3
+[       OK ] Collatz.read_3 (0 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (0 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (0 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (0 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (0 ms)
+[ RUN      ] Collatz.acceptance_fail_630527
+[       OK ] Collatz.acceptance_fail_630527 (0 ms)
+[ RUN      ] Collatz.acceptance_fail_810814
+[       OK ] Collatz.acceptance_fail_810814 (0 ms)
+[ RUN      ] Collatz.cache_value_good
+[       OK ] Collatz.cache_value_good (0 ms)
+[ RUN      ] Collatz.cache_value_bad
+[       OK ] Collatz.cache_value_bad (0 ms)
+[ RUN      ] Collatz.cache_value_invalid
+[       OK ] Collatz.cache_value_invalid (0 ms)
+[ RUN      ] Collatz.eval_one_amilli
+[       OK ] Collatz.eval_one_amilli (0 ms)
+[ RUN      ] Collatz.eval_one_one
+[       OK ] Collatz.eval_one_one (0 ms)
+[ RUN      ] Collatz.eval_one_500k
+[       OK ] Collatz.eval_one_500k (0 ms)
+[ RUN      ] Collatz.hi_lo_to_lo_hi_1
+[       OK ] Collatz.hi_lo_to_lo_hi_1 (0 ms)
+[ RUN      ] Collatz.removes_lower_portion_and_reverses
+[       OK ] Collatz.removes_lower_portion_and_reverses (0 ms)
+[ RUN      ] Collatz.removes_lower_portion
+[       OK ] Collatz.removes_lower_portion (0 ms)
+[ RUN      ] Collatz.print_1
+[       OK ] Collatz.print_1 (0 ms)
+[ RUN      ] Collatz.print_2
+[       OK ] Collatz.print_2 (0 ms)
+[ RUN      ] Collatz.print_3
+[       OK ] Collatz.print_3 (0 ms)
+[ RUN      ] Collatz.solve
+[       OK ] Collatz.solve (0 ms)
+[----------] 22 tests from Collatz (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 22 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 22 tests.

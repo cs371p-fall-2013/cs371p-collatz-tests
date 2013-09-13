@@ -1,0 +1,69 @@
+Running main() from gtest_main.cc
+[==========] Running 30 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 30 tests from Collatz
+[ RUN      ] Collatz.read_1
+[       OK ] Collatz.read_1 (28 ms)
+[ RUN      ] Collatz.read_2
+[       OK ] Collatz.read_2 (5 ms)
+[ RUN      ] Collatz.read_3
+[       OK ] Collatz.read_3 (5 ms)
+[ RUN      ] Collatz.eval_1
+[       OK ] Collatz.eval_1 (7 ms)
+[ RUN      ] Collatz.eval_2
+[       OK ] Collatz.eval_2 (5 ms)
+[ RUN      ] Collatz.eval_3
+[       OK ] Collatz.eval_3 (361 ms)
+[ RUN      ] Collatz.eval_4
+[       OK ] Collatz.eval_4 (3356 ms)
+[ RUN      ] Collatz.eval_5
+[       OK ] Collatz.eval_5 (2 ms)
+[ RUN      ] Collatz.eval_6
+[       OK ] Collatz.eval_6 (3 ms)
+[ RUN      ] Collatz.print_1
+[       OK ] Collatz.print_1 (15 ms)
+[ RUN      ] Collatz.print_2
+[       OK ] Collatz.print_2 (3 ms)
+[ RUN      ] Collatz.print_3
+[       OK ] Collatz.print_3 (3 ms)
+[ RUN      ] Collatz.print_4
+[       OK ] Collatz.print_4 (3 ms)
+[ RUN      ] Collatz.print_5
+[       OK ] Collatz.print_5 (3 ms)
+[ RUN      ] Collatz.print_6
+[       OK ] Collatz.print_6 (4 ms)
+[ RUN      ] Collatz.solve_1
+[       OK ] Collatz.solve_1 (30 ms)
+[ RUN      ] Collatz.solve_2
+[       OK ] Collatz.solve_2 (29 ms)
+[ RUN      ] Collatz.solve_3
+[       OK ] Collatz.solve_3 (29 ms)
+[ RUN      ] Collatz.length_1
+[       OK ] Collatz.length_1 (3 ms)
+[ RUN      ] Collatz.length_2
+[       OK ] Collatz.length_2 (2 ms)
+[ RUN      ] Collatz.length_3
+[       OK ] Collatz.length_3 (2 ms)
+[ RUN      ] Collatz.length_4
+[       OK ] Collatz.length_4 (3 ms)
+[ RUN      ] Collatz.length_5
+[       OK ] Collatz.length_5 (3 ms)
+[ RUN      ] Collatz.length_6
+[       OK ] Collatz.length_6 (3 ms)
+[ RUN      ] Collatz.max_length_1
+[       OK ] Collatz.max_length_1 (3 ms)
+[ RUN      ] Collatz.max_length_2
+[       OK ] Collatz.max_length_2 (3 ms)
+[ RUN      ] Collatz.max_length_3
+[       OK ] Collatz.max_length_3 (3 ms)
+[ RUN      ] Collatz.max_length_4
+[       OK ] Collatz.max_length_4 (3679 ms)
+[ RUN      ] Collatz.max_length_5
+[       OK ] Collatz.max_length_5 (27 ms)
+[ RUN      ] Collatz.max_length_6
+[       OK ] Collatz.max_length_6 (3 ms)
+[----------] 30 tests from Collatz (7647 ms total)
+
+[----------] Global test environment tear-down
+[==========] 30 tests from 1 test case ran. (7690 ms total)
+[  PASSED  ] 30 tests.
