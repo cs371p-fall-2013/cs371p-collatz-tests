@@ -73,6 +73,15 @@ TEST(Collatz, read_same) {
     ASSERT_TRUE(i ==   10);
     ASSERT_TRUE(j ==   10);}
 
+TEST(Collatz, read_full) {
+    std::istringstream r("1 1000000\n");
+    int i;
+    int j;
+    const bool b = collatz_read(r, i, j);
+    ASSERT_TRUE(b == true);
+    ASSERT_TRUE(i ==    1);
+    ASSERT_TRUE(j ==    1000000);}
+
 // ----
 // eval
 // ----
@@ -128,6 +137,10 @@ TEST(Collatz, print_negatives) {
     collatz_print(w, -1, -10, -20);
     ASSERT_TRUE(w.str() == "-1 -10 -20\n");}
 
+TEST(Collatz, print_random) {
+    std::ostringstream w;
+    collatz_print(w, 94, 786, 1);
+    ASSERT_TRUE(w.str() == "94 786 1\n");}
 
 // -----
 // solve
@@ -144,3 +157,15 @@ TEST(Collatz, solve_one_line) {
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_TRUE(w.str() == "1 10 20\n");}
+
+TEST(Collatz, solve_two_lines) {
+    std::istringstream r("1 10\n100 200\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "1 10 20\n100 200 125\n");}
+
+TEST(Collatz, solve_three_lines) {
+    std::istringstream r("1 10\n100 200\n1 1000000");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "1 10 20\n100 200 125\n1 1000000 525\n");}

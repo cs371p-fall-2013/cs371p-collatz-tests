@@ -1,41 +1,93 @@
 Running main() from gtest_main.cc
-[==========] Running 16 tests from 1 test case.
+[==========] Running 42 tests from 1 test case.
 [----------] Global test environment set-up.
-[----------] 16 tests from Collatz
-[ RUN      ] Collatz.read
-[       OK ] Collatz.read (17 ms)
-[ RUN      ] Collatz.read_igtj
-[       OK ] Collatz.read_igtj (3 ms)
-[ RUN      ] Collatz.eval_1
-[       OK ] Collatz.eval_1 (4 ms)
-[ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (2 ms)
-[ RUN      ] Collatz.eval_3
-[       OK ] Collatz.eval_3 (1 ms)
-[ RUN      ] Collatz.eval_4
-[       OK ] Collatz.eval_4 (2 ms)
-[ RUN      ] Collatz.eval_5
-[       OK ] Collatz.eval_5 (1 ms)
-[ RUN      ] Collatz.eval_6
-[       OK ] Collatz.eval_6 (1 ms)
-[ RUN      ] Collatz.eval_7
-[       OK ] Collatz.eval_7 (1 ms)
-[ RUN      ] Collatz.eval_8
-[       OK ] Collatz.eval_8 (2 ms)
+[----------] 42 tests from Collatz
+[ RUN      ] Collatz.readjGreater
+[       OK ] Collatz.readjGreater (27 ms)
+[ RUN      ] Collatz.readiGreater
+[       OK ] Collatz.readiGreater (5 ms)
+[ RUN      ] Collatz.readBiggestRange
+[       OK ] Collatz.readBiggestRange (5 ms)
+[ RUN      ] Collatz.isEvenMinInput
+[       OK ] Collatz.isEvenMinInput (2 ms)
+[ RUN      ] Collatz.isEvenMaxInput
+[       OK ] Collatz.isEvenMaxInput (2 ms)
+[ RUN      ] Collatz.isEvenIntermediate1
+[       OK ] Collatz.isEvenIntermediate1 (3 ms)
+[ RUN      ] Collatz.isEvenIntermediate2
+[       OK ] Collatz.isEvenIntermediate2 (3 ms)
+[ RUN      ] Collatz.isInBoundsInMin
+[       OK ] Collatz.isInBoundsInMin (2 ms)
+[ RUN      ] Collatz.isInBoundsInMax
+[       OK ] Collatz.isInBoundsInMax (2 ms)
+[ RUN      ] Collatz.isInBoundsOutMin
+[       OK ] Collatz.isInBoundsOutMin (3 ms)
+[ RUN      ] Collatz.isInBoundsOutMax
+[       OK ] Collatz.isInBoundsOutMax (2 ms)
+[ RUN      ] Collatz.isValidmin
+[       OK ] Collatz.isValidmin (3 ms)
+[ RUN      ] Collatz.isValidmax
+[       OK ] Collatz.isValidmax (2 ms)
+[ RUN      ] Collatz.isValidfail
+[       OK ] Collatz.isValidfail (3 ms)
+[ RUN      ] Collatz.cacheReadMin
+[       OK ] Collatz.cacheReadMin (3 ms)
+[ RUN      ] Collatz.cacheReadMax
+[       OK ] Collatz.cacheReadMax (3 ms)
+[ RUN      ] Collatz.cacheReadMid
+[       OK ] Collatz.cacheReadMid (2 ms)
+[ RUN      ] Collatz.cacheHitMinInvalid
+[       OK ] Collatz.cacheHitMinInvalid (3 ms)
+[ RUN      ] Collatz.cacheHitMiddle
+[       OK ] Collatz.cacheHitMiddle (3 ms)
+[ RUN      ] Collatz.cacheHitMaxInvalid
+[       OK ] Collatz.cacheHitMaxInvalid (3 ms)
+[ RUN      ] Collatz.nextInput2to1
+[       OK ] Collatz.nextInput2to1 (3 ms)
+[ RUN      ] Collatz.nextInput3to10
+[       OK ] Collatz.nextInput3to10 (3 ms)
+[ RUN      ] Collatz.nextInput4to2
+[       OK ] Collatz.nextInput4to2 (3 ms)
+[ RUN      ] Collatz.nextInput1000000to500000
+[       OK ] Collatz.nextInput1000000to500000 (2 ms)
+[ RUN      ] Collatz.cycleLength1
+[       OK ] Collatz.cycleLength1 (3 ms)
+[ RUN      ] Collatz.cycleLength100
+[       OK ] Collatz.cycleLength100 (3 ms)
+[ RUN      ] Collatz.cycleLength201
+[       OK ] Collatz.cycleLength201 (2 ms)
+[ RUN      ] Collatz.cycleLength900
+[       OK ] Collatz.cycleLength900 (3 ms)
+[ RUN      ] Collatz.maxCycleLength1to10
+[       OK ] Collatz.maxCycleLength1to10 (5 ms)
+[ RUN      ] Collatz.maxCycleLength100to200
+[       OK ] Collatz.maxCycleLength100to200 (6 ms)
+[ RUN      ] Collatz.maxCycleLength201to210
+[       OK ] Collatz.maxCycleLength201to210 (3 ms)
+[ RUN      ] Collatz.maxCycleLength900to1000
+[       OK ] Collatz.maxCycleLength900to1000 (6 ms)
+[ RUN      ] Collatz.eval1to10
+[       OK ] Collatz.eval1to10 (3 ms)
+[ RUN      ] Collatz.eval100to200
+[       OK ] Collatz.eval100to200 (4 ms)
+[ RUN      ] Collatz.eval201to210
+[       OK ] Collatz.eval201to210 (3 ms)
+[ RUN      ] Collatz.eval900to1000
+[       OK ] Collatz.eval900to1000 (4 ms)
 [ RUN      ] Collatz.print1
-[       OK ] Collatz.print1 (10 ms)
+[       OK ] Collatz.print1 (14 ms)
 [ RUN      ] Collatz.print2
-[       OK ] Collatz.print2 (2 ms)
+[       OK ] Collatz.print2 (3 ms)
 [ RUN      ] Collatz.print3
-[       OK ] Collatz.print3 (2 ms)
+[       OK ] Collatz.print3 (3 ms)
 [ RUN      ] Collatz.solve
-[       OK ] Collatz.solve (20 ms)
+[       OK ] Collatz.solve (26 ms)
 [ RUN      ] Collatz.solve_reverse
-[       OK ] Collatz.solve_reverse (19 ms)
-[ RUN      ] Collatz.solve2
-[       OK ] Collatz.solve2 (17 ms)
-[----------] 16 tests from Collatz (120 ms total)
+[       OK ] Collatz.solve_reverse (24 ms)
+[ RUN      ] Collatz.solveExtreme
+[       OK ] Collatz.solveExtreme (34361 ms)
+[----------] 42 tests from Collatz (34589 ms total)
 
 [----------] Global test environment tear-down
-[==========] 16 tests from 1 test case ran. (149 ms total)
-[  PASSED  ] 16 tests.
+[==========] 42 tests from 1 test case ran. (34630 ms total)
+[  PASSED  ] 42 tests.

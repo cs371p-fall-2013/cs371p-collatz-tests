@@ -86,38 +86,6 @@ TEST(Collatz, ReadMultiline){
 	ASSERT_EQ(4, m);
 }
 
-// ----
-// eval
-// ----
-
-TEST(Collatz, eval_1) {
-    const int v = collatz_eval(1, 10);
-    ASSERT_EQ(20, v);}
-
-TEST(Collatz, eval_2) {
-    const int v = collatz_eval(100, 200);
-    ASSERT_EQ(125, v);}
-
-TEST(Collatz, eval_3) {
-    const int v = collatz_eval(201, 210);
-    ASSERT_EQ(89, v);}
-
-TEST(Collatz, eval_4) {
-    const int v = collatz_eval(900, 1000);
-    ASSERT_EQ(174, v);}
-
-TEST(Collatz, EvalIdenticalInput) {
-	const int v = collatz_eval(2, 2);
-	ASSERT_EQ(2, v);
-}
-
-TEST(Collatz, EvalReverseInput) {
-	const int v = collatz_eval(10, 1);
-	ASSERT_EQ(20, v);
-}
-
-
-
 // ----------
 // do_collatz
 // ----------
@@ -142,6 +110,50 @@ TEST(Collatz, do_collatz_4){
 	ASSERT_EQ(11, v);
 }
 
+TEST(Collatz, do_collatz_5){
+	const int v = do_collatz(9);
+	ASSERT_EQ(20, v);
+}
+
+// ----
+// eval
+// ----
+
+TEST(Collatz, eval_1) {
+    const int v = collatz_eval(1, 10);
+    ASSERT_EQ(20, v);}
+
+TEST(Collatz, eval_2) {
+    const int v = collatz_eval(100, 200);
+    ASSERT_EQ(125, v);}
+
+TEST(Collatz, eval_3) {
+    const int v = collatz_eval(201, 210);
+    ASSERT_EQ(89, v);}
+
+TEST(Collatz, eval_4) {
+    const int v = collatz_eval(900, 1000);
+    ASSERT_EQ(174, v);}
+
+TEST(Collatz, EvalIdenticalInput_1) {
+	const int v = collatz_eval(2, 2);
+	ASSERT_EQ(2, v);
+}
+
+TEST(Collatz, EvalIdenticalInput_2) {
+	const int v = collatz_eval(10, 10);
+	ASSERT_EQ(7, v);
+}
+
+TEST(Collatz, EvalReverseInput_1) {
+	const int v = collatz_eval(10, 1);
+	ASSERT_EQ(20, v);
+}
+
+TEST(Collatz, EvalReverseInput_2) {
+	const int v = collatz_eval(1000, 900);
+	ASSERT_EQ(174, v);
+}
 
 // -----
 // print

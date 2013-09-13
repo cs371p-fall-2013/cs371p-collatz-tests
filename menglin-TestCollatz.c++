@@ -47,7 +47,7 @@ To test the program:
 // read
 // ----
 
-TEST(Collatz, read_1) {
+TEST(Collatz, testRead) {
     std::istringstream r("1 10\n");
     int i;
     int j;
@@ -56,7 +56,7 @@ TEST(Collatz, read_1) {
     ASSERT_TRUE(i ==    1);
     ASSERT_TRUE(j ==   10);}
 
-TEST(Collatz, read_2) {
+TEST(Collatz, readFlip) {
     std::istringstream r("2 1\n");
     int i;
     int j;
@@ -65,7 +65,7 @@ TEST(Collatz, read_2) {
     ASSERT_TRUE(i == 2);
     ASSERT_TRUE(j == 1);}
 
-TEST(Collatz, read_3) {
+TEST(Collatz, readBiggerRange) {
     std::istringstream r("1000 10000\n");
     int i;
     int j;
@@ -74,23 +74,15 @@ TEST(Collatz, read_3) {
     ASSERT_TRUE(i == 1000);
     ASSERT_TRUE(j == 10000);}
 
-TEST(Collatz, read_4) {
+TEST(Collatz, readEmpty) {
     std::istringstream r("\n");
     int i;
     int j;
     const bool b = collatz_read(r, i, j);
     ASSERT_TRUE(b == false);}
 
-TEST(CollatzRead, initialTEst) {
-    std::istringstream r("1 10\n");
-    int i;
-    int j;
-    const bool b = collatz_read(r, i, j);
-    ASSERT_TRUE(b == true);
-    ASSERT_TRUE(i == 1);
-    ASSERT_TRUE(j == 10);}
 
-TEST(CollatzRead, switchedInput) {
+TEST(CollatzRead, readFlip2) {
     std::istringstream r("10 1\n");
     int i;
     int j;
@@ -98,7 +90,8 @@ TEST(CollatzRead, switchedInput) {
     ASSERT_TRUE(b == true);
     ASSERT_TRUE(i == 10);
     ASSERT_TRUE(j == 1);}
-TEST(CollatzRead, sameInput) {
+
+TEST(CollatzRead, readEqualNUmber) {
     std::istringstream r("5 5\n");
     int i;
     int j;
@@ -107,7 +100,8 @@ TEST(CollatzRead, sameInput) {
     ASSERT_TRUE(i == 5);
     ASSERT_TRUE(j == 5);
     ASSERT_TRUE(i == j);}
-TEST(CollatzRead, biggerInput) {
+
+TEST(CollatzRead, readBigNumber) {
     std::istringstream r("5000 10000\n");
     int i;
     int j;
@@ -149,6 +143,31 @@ TEST(Collatz, eval_7) {
     const int v = collatz_eval(16, 150);
     ASSERT_TRUE(v == 122);}
 
+TEST(Collatz, evalBigRange) {
+    const int v = collatz_eval(1000, 2000);
+    ASSERT_TRUE(v == 182);}
+
+TEST(Collatz, evalBigNumber) {
+    const int v = collatz_eval(12345, 123456);
+    ASSERT_TRUE(v == 354);}
+
+TEST(Collatz, evalBigMaxiumCycleLength){
+    const int v = collatz_eval(3225, 11789);
+    ASSERT_TRUE(v == 268);}
+
+TEST(Collatz, evalEqualNumber) {
+    const int v = collatz_eval(10, 10);
+    ASSERT_TRUE(v == 7);}
+
+TEST(Collatz, evalFlip) {
+    const int v = collatz_eval(100, 1);
+    ASSERT_TRUE(v == 119);}
+
+
+TEST(Collatz, evalFlipBigNumber){
+    const int v = collatz_eval(6701, 4832);
+    ASSERT_TRUE(v == 262);}
+
 
 // -----
 // print
@@ -174,22 +193,17 @@ TEST(Collatz, print_4) {
     collatz_print(w, 5, 50, 52);
     ASSERT_TRUE(w.str() == "5 50 52\n");}
 
-TEST(Collatzprint, defaultprint) {
-    std::ostringstream w;
-    collatz_print(w, 1, 10, 20);
-    ASSERT_TRUE(w.str() == "1 10 20\n");}
-
-TEST(Collatzprint, simpleprint) {
+TEST(Collatzprint, printSmallNUmber) {
     std::ostringstream w;
     collatz_print(w, 1, 2, 3);
     ASSERT_TRUE(w.str() == "1 2 3\n");}
 
-TEST(Collatzprint, reversedSimpleprint) {
+TEST(Collatzprint, printFlip) {
     std::ostringstream w;
     collatz_print(w, 3, 2, 1);
     ASSERT_TRUE(w.str() == "3 2 1\n");}
 
-TEST(Collatzprint, bigNumbers) {
+TEST(Collatzprint, printBigNumberMixMatch) {
     std::ostringstream w;
     collatz_print(w, 12345, 98765, 43210);
     ASSERT_TRUE(w.str() == "12345 98765 43210\n");}
@@ -222,19 +236,19 @@ TEST(Collatz, solve_4) {
     collatz_solve(r, w);
     ASSERT_TRUE(w.str() == "16 150 122\n169 154 112\n");}
 
-TEST(Collatz, solve_5) {
+TEST(Collatz, solveOneLine) {
     std::istringstream r("3 10\n");
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_TRUE(w.str() == "3 10 20\n");}
 
-TEST(Collatz, solve_6) {
+TEST(Collatz, solveFlip) {
     std::istringstream r("8239 2971\n");
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_TRUE(w.str() == "8239 2971 262\n");}
     
-TEST(Collatz, solve_7) {
+TEST(Collatz, solveBigNumberAndFlip) {
     std::istringstream r("7639 11696\n3427 1280\n");
     std::ostringstream w;
     collatz_solve(r, w);

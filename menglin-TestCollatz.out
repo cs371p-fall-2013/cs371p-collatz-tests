@@ -1,33 +1,45 @@
 Running main() from gtest_main.cc
-[==========] Running 30 tests from 3 test cases.
+[==========] Running 34 tests from 3 test cases.
 [----------] Global test environment set-up.
-[----------] 22 tests from Collatz
-[ RUN      ] Collatz.read_1
-[       OK ] Collatz.read_1 (17 ms)
-[ RUN      ] Collatz.read_2
-[       OK ] Collatz.read_2 (3 ms)
-[ RUN      ] Collatz.read_3
-[       OK ] Collatz.read_3 (3 ms)
-[ RUN      ] Collatz.read_4
-[       OK ] Collatz.read_4 (3 ms)
+[----------] 28 tests from Collatz
+[ RUN      ] Collatz.testRead
+[       OK ] Collatz.testRead (17 ms)
+[ RUN      ] Collatz.readFlip
+[       OK ] Collatz.readFlip (3 ms)
+[ RUN      ] Collatz.readBiggerRange
+[       OK ] Collatz.readBiggerRange (3 ms)
+[ RUN      ] Collatz.readEmpty
+[       OK ] Collatz.readEmpty (3 ms)
 [ RUN      ] Collatz.eval_1
-[       OK ] Collatz.eval_1 (2 ms)
+[       OK ] Collatz.eval_1 (3 ms)
 [ RUN      ] Collatz.eval_2
-[       OK ] Collatz.eval_2 (1 ms)
+[       OK ] Collatz.eval_2 (2 ms)
 [ RUN      ] Collatz.eval_3
 [       OK ] Collatz.eval_3 (2 ms)
 [ RUN      ] Collatz.eval_4
 [       OK ] Collatz.eval_4 (2 ms)
 [ RUN      ] Collatz.eval_5
-[       OK ] Collatz.eval_5 (2 ms)
+[       OK ] Collatz.eval_5 (1 ms)
 [ RUN      ] Collatz.eval_6
-[       OK ] Collatz.eval_6 (2 ms)
+[       OK ] Collatz.eval_6 (1 ms)
 [ RUN      ] Collatz.eval_7
 [       OK ] Collatz.eval_7 (2 ms)
+[ RUN      ] Collatz.evalBigRange
+[       OK ] Collatz.evalBigRange (2 ms)
+[ RUN      ] Collatz.evalBigNumber
+[       OK ] Collatz.evalBigNumber (42 ms)
+[ RUN      ] Collatz.evalBigMaxiumCycleLength
+[       OK ] Collatz.evalBigMaxiumCycleLength (3 ms)
+[ RUN      ] Collatz.evalEqualNumber
+[       OK ] Collatz.evalEqualNumber (2 ms)
+[ RUN      ] Collatz.evalFlip
+[       OK ] Collatz.evalFlip (3 ms)
+[ RUN      ] Collatz.evalFlipBigNumber
+[       OK ] Collatz.evalFlipBigNumber (2 ms)
 [ RUN      ] Collatz.print_1
 [       OK ] Collatz.print_1 (9 ms)
 [ RUN      ] Collatz.print_2
-[       OK ] Collatz.print_2 (2 ms)
+[       OK ] Collatz.print_2 (3 ms)
 [ RUN      ] Collatz.print_3
 [       OK ] Collatz.print_3 (2 ms)
 [ RUN      ] Collatz.print_4
@@ -40,36 +52,32 @@ Running main() from gtest_main.cc
 [       OK ] Collatz.solve_3 (2 ms)
 [ RUN      ] Collatz.solve_4
 [       OK ] Collatz.solve_4 (3 ms)
-[ RUN      ] Collatz.solve_5
-[       OK ] Collatz.solve_5 (2 ms)
-[ RUN      ] Collatz.solve_6
-[       OK ] Collatz.solve_6 (13 ms)
-[ RUN      ] Collatz.solve_7
-[       OK ] Collatz.solve_7 (18 ms)
-[----------] 22 tests from Collatz (111 ms total)
+[ RUN      ] Collatz.solveOneLine
+[       OK ] Collatz.solveOneLine (2 ms)
+[ RUN      ] Collatz.solveFlip
+[       OK ] Collatz.solveFlip (3 ms)
+[ RUN      ] Collatz.solveBigNumberAndFlip
+[       OK ] Collatz.solveBigNumberAndFlip (3 ms)
+[----------] 28 tests from Collatz (139 ms total)
 
-[----------] 4 tests from CollatzRead
-[ RUN      ] CollatzRead.initialTEst
-[       OK ] CollatzRead.initialTEst (3 ms)
-[ RUN      ] CollatzRead.switchedInput
-[       OK ] CollatzRead.switchedInput (3 ms)
-[ RUN      ] CollatzRead.sameInput
-[       OK ] CollatzRead.sameInput (4 ms)
-[ RUN      ] CollatzRead.biggerInput
-[       OK ] CollatzRead.biggerInput (3 ms)
-[----------] 4 tests from CollatzRead (13 ms total)
+[----------] 3 tests from CollatzRead
+[ RUN      ] CollatzRead.readFlip2
+[       OK ] CollatzRead.readFlip2 (3 ms)
+[ RUN      ] CollatzRead.readEqualNUmber
+[       OK ] CollatzRead.readEqualNUmber (3 ms)
+[ RUN      ] CollatzRead.readBigNumber
+[       OK ] CollatzRead.readBigNumber (3 ms)
+[----------] 3 tests from CollatzRead (11 ms total)
 
-[----------] 4 tests from Collatzprint
-[ RUN      ] Collatzprint.defaultprint
-[       OK ] Collatzprint.defaultprint (2 ms)
-[ RUN      ] Collatzprint.simpleprint
-[       OK ] Collatzprint.simpleprint (1 ms)
-[ RUN      ] Collatzprint.reversedSimpleprint
-[       OK ] Collatzprint.reversedSimpleprint (2 ms)
-[ RUN      ] Collatzprint.bigNumbers
-[       OK ] Collatzprint.bigNumbers (2 ms)
-[----------] 4 tests from Collatzprint (9 ms total)
+[----------] 3 tests from Collatzprint
+[ RUN      ] Collatzprint.printSmallNUmber
+[       OK ] Collatzprint.printSmallNUmber (2 ms)
+[ RUN      ] Collatzprint.printFlip
+[       OK ] Collatzprint.printFlip (2 ms)
+[ RUN      ] Collatzprint.printBigNumberMixMatch
+[       OK ] Collatzprint.printBigNumberMixMatch (2 ms)
+[----------] 3 tests from Collatzprint (6 ms total)
 
 [----------] Global test environment tear-down
-[==========] 30 tests from 3 test cases ran. (161 ms total)
-[  PASSED  ] 30 tests.
+[==========] 34 tests from 3 test cases ran. (183 ms total)
+[  PASSED  ] 34 tests.

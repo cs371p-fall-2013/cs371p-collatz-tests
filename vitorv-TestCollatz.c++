@@ -46,7 +46,7 @@ To test the program:
 // read
 // ----
 
-TEST(Collatz, read) {
+TEST(Collatz, readjGreater) {
     std::istringstream r("1 10\n");
     int i;
     int j;
@@ -55,7 +55,7 @@ TEST(Collatz, read) {
     ASSERT_TRUE(i ==    1);
     ASSERT_TRUE(j ==   10);}
 
-TEST(Collatz, read_igtj) {
+TEST(Collatz, readiGreater) {
     std::istringstream r("10 1\n");
     int i;
     int j;
@@ -64,50 +64,185 @@ TEST(Collatz, read_igtj) {
     ASSERT_TRUE(i ==   10);
     ASSERT_TRUE(j ==    1);}
 
-TEST(Collatz, read_igtj) {
-    std::istringstream r("1 1\n");
+TEST(Collatz, readBiggestRange) {
+    std::istringstream r("1 1000000\n");
     int i;
     int j;
     const bool b = collatz_read(r, i, j);
     ASSERT_TRUE(b == true);
     ASSERT_TRUE(i ==    1);
-    ASSERT_TRUE(j ==    1);}
+    ASSERT_TRUE(j == 1000000);}
+
+// ------
+// isEven
+// ------
+
+TEST(Collatz, isEvenMinInput) {
+    const bool v = collatz_isEven(1);
+    ASSERT_TRUE(v == false);}
+
+TEST(Collatz, isEvenMaxInput) {
+    const bool v = collatz_isEven(1000000);
+    ASSERT_TRUE(v == true);}
+
+TEST(Collatz, isEvenIntermediate1) {
+    const bool v = collatz_isEven(666666);
+    ASSERT_TRUE(v == true);}
+
+TEST(Collatz, isEvenIntermediate2) {
+    const bool v = collatz_isEven(666667);
+    ASSERT_TRUE(v == false);}
+
+// ---------- 
+// isInBounds
+// ----------
+
+TEST(Collatz, isInBoundsInMin) {
+    const bool v = collatz_isInBounds(1);
+    ASSERT_TRUE(v == true);}
+
+TEST(Collatz, isInBoundsInMax) {
+    const bool v = collatz_isInBounds(1000000);
+    ASSERT_TRUE(v == true);}
+
+TEST(Collatz, isInBoundsOutMin) {
+    const bool v = collatz_isInBounds(0);
+    ASSERT_TRUE(v == false);}
+
+TEST(Collatz, isInBoundsOutMax) {
+    const bool v = collatz_isInBounds(1000001);
+    ASSERT_TRUE(v == false);}
+
+// -------
+// isValid
+// -------
+
+TEST(Collatz, isValidmin) {
+    const bool v = collatz_isValid(2);
+    ASSERT_TRUE(v == true);}
+
+TEST(Collatz, isValidmax) {
+    const bool v = collatz_isValid(1000000);
+    ASSERT_TRUE(v == true);}
+
+TEST(Collatz, isValidfail) {
+    const bool v = collatz_isValid(0);
+    ASSERT_TRUE(v == false);}
+
+// ---------
+// cacheRead
+// ---------
+
+TEST(Collatz, cacheReadMin) {
+    const int v = collatz_cacheRead(2);
+    ASSERT_TRUE(v == 0);}
+
+TEST(Collatz, cacheReadMax) {
+    const int v = collatz_cacheRead(1000000);
+    ASSERT_TRUE(v == 0);}
+
+TEST(Collatz, cacheReadMid) {
+    const int v = collatz_cacheRead(500000);
+    ASSERT_TRUE(v == 0);}
+
+// ---------
+// cacheHit
+// ---------
+
+TEST(Collatz, cacheHitMinInvalid) {
+    int i;
+    const int v = collatz_cacheHit(1, i);
+    ASSERT_TRUE(v == false);}
+
+TEST(Collatz, cacheHitMiddle) {
+    int i;
+    const int v = collatz_cacheHit(250000, i);
+    ASSERT_TRUE(v == false);}
+
+TEST(Collatz, cacheHitMaxInvalid) {
+    int i;
+    const int v = collatz_cacheHit(500000, i);
+    ASSERT_TRUE(v == false);}
+
+// ---------
+// nextInput
+// ---------
+
+TEST(Collatz, nextInput2to1) {
+    const int v = collatz_nextInput(2);
+    ASSERT_TRUE(v == 1);}
+
+TEST(Collatz, nextInput3to10) {
+    const int v = collatz_nextInput(3);
+    ASSERT_TRUE(v == 10);}
+
+TEST(Collatz, nextInput4to2) {
+    const int v = collatz_nextInput(4);
+    ASSERT_TRUE(v == 2);}
+
+TEST(Collatz, nextInput1000000to500000) {
+    const int v = collatz_nextInput(1000000);
+    ASSERT_TRUE(v == 500000);}
+
+// -----------
+// cycleLength
+// -----------
+
+TEST(Collatz, cycleLength1) {
+    const int v = collatz_cycleLength(1);
+    ASSERT_TRUE(v == 1);}
+
+TEST(Collatz, cycleLength100) {
+    const int v = collatz_cycleLength(100);
+    ASSERT_TRUE(v == 26);}
+
+TEST(Collatz, cycleLength201) {
+    const int v = collatz_cycleLength(201);
+    ASSERT_TRUE(v == 19);}
+
+TEST(Collatz, cycleLength900) {
+    const int v = collatz_cycleLength(900);
+    ASSERT_TRUE(v == 55);}
+
+// --------------
+// maxCycleLength
+// --------------
+
+TEST(Collatz, maxCycleLength1to10) {
+    const int v = collatz_maxCycleLength(1, 10);
+    ASSERT_TRUE(v == 20);}
+
+TEST(Collatz, maxCycleLength100to200) {
+    const int v = collatz_maxCycleLength(100, 200);
+    ASSERT_TRUE(v == 125);}
+
+TEST(Collatz, maxCycleLength201to210) {
+    const int v = collatz_maxCycleLength(201, 210);
+    ASSERT_TRUE(v == 89);}
+
+TEST(Collatz, maxCycleLength900to1000) {
+    const int v = collatz_maxCycleLength(900, 1000);
+    ASSERT_TRUE(v == 174);}
 
 // ----
 // eval
 // ----
 
-TEST(Collatz, eval_1) {
+TEST(Collatz, eval1to10) {
     const int v = collatz_eval(1, 10);
     ASSERT_TRUE(v == 20);}
 
-TEST(Collatz, eval_2) {
+TEST(Collatz, eval100to200) {
     const int v = collatz_eval(100, 200);
     ASSERT_TRUE(v == 125);}
 
-TEST(Collatz, eval_3) {
+TEST(Collatz, eval201to210) {
     const int v = collatz_eval(201, 210);
     ASSERT_TRUE(v == 89);}
 
-TEST(Collatz, eval_4) {
+TEST(Collatz, eval900to1000) {
     const int v = collatz_eval(900, 1000);
     ASSERT_TRUE(v == 174);}
-
-TEST(Collatz, eval_5) {
-    const int v = collatz_eval(1, 1);
-    ASSERT_TRUE(v == 1);}
-
-TEST(Collatz, eval_6) {
-    const int v = collatz_eval(100, 100);
-    ASSERT_TRUE(v == 26);}
-
-TEST(Collatz, eval_7) {
-    const int v = collatz_eval(201, 201);
-    ASSERT_TRUE(v == 19);}
-
-TEST(Collatz, eval_8) {
-    const int v = collatz_eval(900, 900);
-    ASSERT_TRUE(v == 55);}
 
 // -----
 // print
@@ -144,8 +279,8 @@ TEST(Collatz, solve_reverse) {
     collatz_solve(r,w);
     ASSERT_TRUE(w.str() == "10 1 20\n200 100 125\n210 201 89\n1000 900 174\n");}
 
-TEST(Collatz, solve2) {
-    std::istringstream r("1 1\n2 2\n3 3\n4 4\n");
+TEST(Collatz, solveExtreme) {
+    std::istringstream r("1 1000000");
     std::ostringstream w;
     collatz_solve(r,w);
-    ASSERT_TRUE(w.str() == "1 1 1\n2 2 2\n3 3 8\n4 4 3\n");}
+    ASSERT_TRUE(w.str() == "1 1000000 525\n");}
