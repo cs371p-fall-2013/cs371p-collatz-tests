@@ -143,22 +143,43 @@ TEST(Collatz, eval_9) {
 // print
 // -----
 
-TEST(Collatz, print) {
+TEST(Collatz, print_1) {
     std::ostringstream w;
     collatz_print(w, 1, 10, 20);
-    ASSERT_TRUE(w.str() == "1 10 20\n");}
-
+    ASSERT_TRUE(w.str() == "1 10 20\n");
+}
 TEST(Collatz, print_2) {
     std::ostringstream w;
     collatz_print(w, 1, 1, 1);
     ASSERT_TRUE(w.str() == "1 1 1\n");
 }
+TEST(Collatz, print_3) {
+    std::ostringstream w;
+    collatz_print(w, 1000000, 1000000, 129);
+    ASSERT_TRUE(w.str() == "1000000 1000000 129\n");
+}
+
 // -----
 // solve
 // -----
 
-TEST(Collatz, solve) {
+TEST(Collatz, solve_1) {
     std::istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     std::ostringstream w;
     collatz_solve(r, w);
-    ASSERT_TRUE(w.str() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n");}
+    ASSERT_TRUE(w.str() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n");
+}
+TEST(Collatz, solve_2) {
+    std::istringstream r("10 1\n200 100\n210 201\n1000 900\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "10 1 20\n200 100 125\n210 201 89\n1000 900 174\n");
+}
+TEST(Collatz, solve_3) {
+    std::istringstream r("289384 930887\n692778 636916\n747794 238336\n885387 760493\n516650 641422\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "289384 930887 476\n692778 636916 442\n747794 238336 470\n885387 760493 468\n516650 641422 452\n");
+}
+
+
