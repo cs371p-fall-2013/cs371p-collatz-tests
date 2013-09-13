@@ -5,26 +5,26 @@
 // --------------------------------
 
 /*
-To test the program:
-    % ls -al /usr/include/gtest/
-    ...
-    gtest.h
-    ...
-
-    % locate libgtest.a
-    /usr/lib/libgtest.a
-
-    % locate libpthread.a
-    /usr/lib/x86_64-linux-gnu/libpthread.a
-    /usr/lib32/libpthread.a
-
-    % locate libgtest_main.a
-    /usr/lib/libgtest_main.a
-
-    % g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lpthread -lgtest_main
-
-    % valgrind TestCollatz > TestCollatz.out
-*/
+ To test the program:
+ % ls -al /usr/include/gtest/
+ ...
+ gtest.h
+ ...
+ 
+ % locate libgtest.a
+ /usr/lib/libgtest.a
+ 
+ % locate libpthread.a
+ /usr/lib/x86_64-linux-gnu/libpthread.a
+ /usr/lib32/libpthread.a
+ 
+ % locate libgtest_main.a
+ /usr/lib/libgtest_main.a
+ 
+ % g++ -pedantic -std=c++0x -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lpthread -lgtest_main
+ 
+ % valgrind TestCollatz > TestCollatz.out
+ */
 
 // --------
 // includes
@@ -55,6 +55,48 @@ TEST(Collatz, read) {
     ASSERT_TRUE(i ==    1);
     ASSERT_TRUE(j ==   10);}
 
+TEST(Collatz, read_2) {
+    std::istringstream r("1 1\n");
+    int i;
+    int j;
+    const bool b = collatz_read(r, i, j);
+    ASSERT_TRUE(b == true);
+    ASSERT_TRUE(i ==    1);
+    ASSERT_TRUE(j ==   1);}
+
+TEST(Collatz, read_3) {
+    std::istringstream r("339002 339002\n");
+    int i;
+    int j;
+    const bool b = collatz_read(r, i, j);
+    ASSERT_TRUE(b == true);
+    ASSERT_TRUE(i ==    339002);
+    ASSERT_TRUE(j ==   339002);}
+
+TEST(Collatz, read_4) {
+    std::istringstream r("55 56\n");
+    int i;
+    int j;
+    const bool b = collatz_read(r, i, j);
+    ASSERT_TRUE(b == true);
+    ASSERT_TRUE(i ==    55);
+    ASSERT_TRUE(j ==    56);}
+
+// ----
+// cyclelength
+// ----
+TEST(Collatz, cyclelength_1) {
+    const int v = collatz_cyclelength(3);
+    ASSERT_TRUE(v == 8);}
+
+TEST(Collatz, cyclelength_2) {
+    const int v = collatz_cyclelength(6);
+    ASSERT_TRUE(v == 9);}
+
+TEST(Collatz, cyclelength_3) {
+    const int v = collatz_cyclelength(1);
+    ASSERT_TRUE(v == 1);}
+
 // ----
 // eval
 // ----
@@ -75,6 +117,10 @@ TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_TRUE(v == 174);}
 
+TEST(Collatz, eval_5) {
+    const int v = collatz_eval(595369, 5212);
+    ASSERT_TRUE(v == 470);}
+
 // -----
 // print
 // -----
@@ -83,6 +129,21 @@ TEST(Collatz, print) {
     std::ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_TRUE(w.str() == "1 10 20\n");}
+
+TEST(Collatz, print_2) {
+    std::ostringstream w;
+    collatz_print(w, 8, 99, 300);
+    ASSERT_TRUE(w.str() == "8 99 300\n");}
+
+TEST(Collatz, print_3) {
+    std::ostringstream w;
+    collatz_print(w, 1, 1, 1);
+    ASSERT_TRUE(w.str() == "1 1 1\n");}
+
+TEST(Collatz, print_4) {
+    std::ostringstream w;
+    collatz_print(w, 330000, 522000, 122000);
+    ASSERT_TRUE(w.str() == "330000 522000 122000\n");}
 
 // -----
 // solve
@@ -93,3 +154,21 @@ TEST(Collatz, solve) {
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_TRUE(w.str() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n");}
+
+TEST(Collatz, solve_2) {
+    std::istringstream r("1 10\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "1 10 20\n");}
+
+TEST(Collatz, solve_3) {
+    std::istringstream r("100 200\n 900 1000\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "100 200 125\n900 1000 174\n");}
+
+TEST(Collatz, solve_4) {
+    std::istringstream r("7639 11696\n3427 1280\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "7639 11696 268\n3427 1280 217\n");}
