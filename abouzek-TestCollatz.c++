@@ -90,6 +90,22 @@ TEST(Collatz, read_same) {
   ASSERT_EQ(1, j);}
 
 // ----
+// cycle_length
+// ----
+
+TEST(Collatz, cycle_1) {
+  const int v = cycle_length(1);
+  ASSERT_TRUE(v == 1);}
+
+TEST(Collatz, cycle_3) {
+  const int v = cycle_length(3);
+  ASSERT_TRUE(v == 8);}
+
+TEST(Collatz, cycle_5) {
+  const int v = cycle_length(5);
+  ASSERT_TRUE(v == 6);}
+
+// ----
 // eval
 // ----
 
