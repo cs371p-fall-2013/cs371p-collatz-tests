@@ -78,27 +78,27 @@ TEST(Collatz, read_3) {
 // ----
 
 TEST(Collatz, eval_1) {
-    const int v = collatz_eval(1, 10);
+    const int v = collatz_eval(1, 10, false);
     ASSERT_TRUE(v == 20);}
 
 TEST(Collatz, eval_2) {
-    const int v = collatz_eval(1000, 2000);
+    const int v = collatz_eval(1000, 2000, false);
     ASSERT_TRUE(v == 182);}
 
 TEST(Collatz, eval_3) {
-    const int v = collatz_eval(12345, 123456);
+    const int v = collatz_eval(12345, 123456, false);
     ASSERT_TRUE(v == 354);}
 
 TEST(Collatz, eval_4) {
-    const int v = collatz_eval(1, 999999);
+    const int v = collatz_eval(1, 999999, false);
     ASSERT_TRUE(v == 525);}
 
 TEST(Collatz, eval_5) {
-    const int v = collatz_eval(10, 10);
+    const int v = collatz_eval(10, 10, false);
     ASSERT_TRUE(v == 7);}
 
 TEST(Collatz, eval_6) {
-    const int v = collatz_eval(100, 1);
+    const int v = collatz_eval(100, 1, false);
     ASSERT_TRUE(v == 119);}
 
 // -----
@@ -184,3 +184,31 @@ TEST(Collatz, length_5) {
 TEST(Collatz, length_6) {
     int len = collatz_length(20);
     ASSERT_TRUE(len == 8);}
+    
+// ------
+// max_length
+// ------
+
+TEST(Collatz, max_length_1) {
+    int len = collatz_max_length(10, 10, false);
+    ASSERT_TRUE(len == 7);}
+
+TEST(Collatz, max_length_2) {
+    int len = collatz_max_length(20, 20, false);
+    ASSERT_TRUE(len == 8);}
+
+TEST(Collatz, max_length_3) {
+    int len = collatz_max_length(1, 20, false);
+    ASSERT_TRUE(len == 21);}
+
+TEST(Collatz, max_length_4) {
+    int len = collatz_max_length(1, 999999, false);
+    ASSERT_TRUE(len == 525);}
+
+TEST(Collatz, max_length_5) {
+    int len = collatz_max_length(1000, 10000, false);
+    ASSERT_TRUE(len == 262);}
+
+TEST(Collatz, max_length_6) {
+    int len = collatz_max_length(50, 250, false);
+    ASSERT_TRUE(len == 128);}

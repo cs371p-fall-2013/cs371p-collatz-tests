@@ -113,12 +113,11 @@ TEST(Collatz, eval_7) {
     const int v = collatz_eval(200, 100);
     ASSERT_TRUE(v == 125);}
 
-
 // -----
 // print
 // -----
 
-TEST(Collatz, print_1) {
+TEST(Collatz, print) {
     std::ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_TRUE(w.str() == "1 10 20\n");}
