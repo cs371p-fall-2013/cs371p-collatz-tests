@@ -1,9 +1,3 @@
-// --------------------------------
-// projects/collatz/TestCollatz.c++
-// Copyright (C) 2013
-// Glenn P. Downing
-// --------------------------------
-
 /*
 To test the program:
     % ls -al /usr/include/gtest/
@@ -85,9 +79,9 @@ TEST(Collatz, InverseRead){
     int i;
     int j;
     const bool b = collatz_read(r, i, j);
-    ASSERT_TRUE(b == true)
+    ASSERT_TRUE(b == true);
     ASSERT_TRUE(i == 10);
-    ASSERT_TRUE(j == 1)}
+    ASSERT_TRUE(j == 1);}
 // ----
 // eval
 // ----
@@ -107,6 +101,21 @@ TEST(Collatz, eval_3) {
 TEST(Collatz, eval_4) {
     const int v = collatz_eval(900, 1000);
     ASSERT_TRUE(v == 174);}
+// ----------------
+// collatz_cycle_length
+// ----------------
+
+TEST(Collatz, one) {
+    const int x = collatz_cycle_length(1);
+    ASSERT_TRUE(x == 1);}
+
+TEST(Collatz, five) {
+    const int x = collatz_cycle_length(5);
+    ASSERT_TRUE(x == 6);}
+
+TEST(Collatz, three) {
+    const int x = collatz_cycle_length(3);
+    ASSERT_TRUE(x == 8);}
 
 // -----
 // print
@@ -125,19 +134,32 @@ TEST(Collatz, print2) {
 TEST(Collatz, print3) {
     std::ostringstream w;
     collatz_print(w, 201, 210, 89);
-    ASSERT_TRUE(w.str() == "201, 210, 89\n");}
+    ASSERT_TRUE(w.str() == "201 210 89\n");}
 
 TEST(Collatz, print4) {
     std::ostringstream w;
     collatz_print(w, 900, 1000, 174);
-    ASSERT_TRUE(w.str() == "900 1000, 174\n");}
+    ASSERT_TRUE(w.str() == "900 1000 174\n");}
 
 // -----
 // solve
 // -----
 
-TEST(Collatz, solve) {
+TEST(Collatz, solve1) {
     std::istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     std::ostringstream w;
     collatz_solve(r, w);
     ASSERT_TRUE(w.str() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n");}
+
+TEST(Collatz, solve2) {
+    std::istringstream r("10 1\n200 100\n210 201\n1000 900\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "10 1 20\n200 100 125\n210 201 89\n1000 900 174\n");}
+
+TEST(Collatz, solve3) {
+    std::istringstream r("100 200\n900 1000\n1 10\n201 210\n");
+    std::ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_TRUE(w.str() == "100 200 125\n900 1000 174\n1 10 20\n201 210 89\n");}
+
